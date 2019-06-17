@@ -1,0 +1,415 @@
+.puleft2height .widget-inline-box {
+    padding: 8% 0 !important;
+
+}
+
+.pumiddboxttop2_cont ul {
+    height: auto !important;
+}
+
+.mrbox_top_right {
+    width: 28.7%;
+    padding-right: 2%;
+}
+
+.anchorBL {
+    display: none;
+}
+
+.arightboxbott {
+    /* display: none; */
+}
+
+.arightboxtop {
+    /* height: 87.9%; */
+}
+
+.amiddboxtbott1content2 {
+    height: 86%;
+    margin-top: 1.6%;
+}
+
+#arightboxbott {
+    /*background-color: rgba(1, 202, 217, .2);*/
+}
+
+#arightboxbott ul {
+    padding: 10px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#arightboxbott ul li {
+    display: inline-grid;
+    padding: 6% 0;
+}
+
+#arightboxbott ul li img {
+    margin: 0 auto;
+    width: 48px;
+}
+
+#arightboxbott ul li p {
+    font-size: 13px;
+    font-weight: 100;
+    margin: 5px 0;
+}
+
+#arightboxbott ul li b {
+    font-size: 24px;
+}
+
+#arightboxbott ul li:nth-of-type(1) {
+    border-right: 1px solid #4063bf;
+    border-bottom: 1px solid #4063bf;
+
+}
+
+#arightboxbott ul li:nth-of-type(2) {
+    border-bottom: 1px solid #4063bf;
+}
+
+#arightboxbott ul li:nth-of-type(3) {
+    border-right: 1px solid #4063bf;
+
+}
+
+#aleftboxtmiddr {
+    /*background-color: rgba(1, 202, 217, .2);*/
+    width: 90%;
+    margin-left: 5.3%;
+    margin-top: 5px !important;
+}
+
+#aleftboxtmiddr ul {
+    padding: 10px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#aleftboxtmiddr ul li {
+    display: inline-grid;
+    padding: 6% 6%;
+}
+
+#aleftboxtmiddr ul li p:nth-of-type(1) {
+    font-size: 13px;
+    /* font-weight: 100; */
+    margin: 5px 0;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#aleftboxtmiddr ul li b {
+    font-size: 40px;
+    color: skyblue;
+}
+
+#aleftboxtmiddr ul li b small {
+    /* font-size: 24px; */
+    font-size: 18px;
+}
+
+#aleftboxtmiddr ul li p:nth-of-type(2) {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.hotRed p:nth-of-type(2) span {
+    color: #ff354a;
+}
+
+#aleftboxtmiddr ul li:nth-of-type(1) {
+    border-right: 1px solid #4063bf;
+    border-bottom: 1px solid #4063bf;
+
+}
+
+#aleftboxtmiddr ul li:nth-of-type(2) {
+    border-bottom: 1px solid #4063bf;
+}
+
+#aleftboxtmiddr ul li:nth-of-type(3) {
+    border-right: 1px solid #4063bf;
+
+}
+
+.hotRed b {
+    color: #ff354a !important;
+
+}
+
+.hotRed b small {
+    color: #ff354a !important;
+
+}
+
+.tlboxEdit {
+    margin-top: 0 !important;
+    height: 86% !important;
+
+}
+
+.tlboxEdit div {
+
+}
+
+.tlboxEdit div ul {
+    padding: 0 20px;
+    /* text-align: left; */
+}
+
+.tlboxEdit div ul li {
+    color: rgba(255, 255, 255, .6);
+    clear: both;
+    font-size: 14px;
+    padding-top: 3.6%;
+    /* text-align: center; */
+}
+
+.tlboxEdit div ul li span:nth-of-type(1) {
+    float: left;
+    min-width: 106px;
+    text-align: left;
+}
+
+.tlboxEdit div ul li span:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+.tlboxEdit div ul li a {
+    float: right;
+    color: #77fef8;
+
+    text-decoration: none;
+}
+
+.aleftboxtbott_cont2 {
+    margin-top: 0 !important;
+    height: 90% !important;
+}
+
+.amiddboxtbott1content2 {
+    margin-top: 1px !important;
+    height: 90% !important;
+}
+
+.amiddboxtbott2content {
+    margin-top: 1px !important;
+    height: 89% !important;
+}
+
+#amiddboxtbott1 {
+    width: 92% !important;
+    /* height: 80%; */
+    margin-left: 4% !important;
+    /* margin-top: .6%; */
+}
+
+.alertMask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 999;
+    display: none;
+
+}
+
+.mask {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+}
+
+.maskVideo {
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    height: 500px;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -250px;
+    object-fit: cover
+
+}
+
+/* 人口分析 */
+.mrbox_top_midd {
+    /* width: 68% !important; */
+}
+
+/* 游客数据统计 */
+/* .bdMap{
+    width: 91%;
+    height: 90%;
+    border: 1px solid;
+    margin-left: 4.5%;
+    margin-top: 42px;
+} */
+.mrbox.prbox {
+    float: left;
+    width: 41%;
+    height: 100%;
+}
+
+.mrbox_top_midd {
+    width: 100%;
+}
+
+.left2 {
+    width: 27%;
+}
+
+.left1 {
+    width: 27%;
+}
+
+.lpeft2bot {
+    margin-top: 2%;
+}
+
+.pleftbox2midd {
+    margin-top: 2%;
+}
+
+.lpeftmidbot {
+    margin-top: 2%;
+}
+
+.lpeftbot {
+    margin-top: 1.5%;
+}
+
+.hdtop ul li {
+    margin-top: 81%;
+}
+
+.pvr ul {
+    position: absolute;
+    left: 9%;
+    top: 18%;
+}
+
+.editNum {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.editNum li {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 35px;
+    margin: 0 1%;
+    border: 1px solid #30daa1;
+    width: 25px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.hdmrboxtm-editTitle {
+    font-size: 27px;
+    text-align: center;
+    margin-top: 5%;
+    display: inline-block;
+    float: left;
+    margin-left: 5%;
+}
+
+.lpeftb2otcont {
+    width: 90.1%;
+    margin-top: 3%;
+    margin-left: 5.2%;
+    height: 85.5%;
+}
+
+.lpeftmidbotcont {
+    /* margin-top: 1%; */
+
+}
+
+.plefttoday {
+    height: 39.4%;
+}
+
+.lefttoday_number {
+    overflow: hidden;
+    height: 90%;
+    width: 91%;
+    margin: 1% 5%;
+    /*background: rgba(1, 202, 217, .2);*/
+}
+
+.lefttoday_number .widget-inline-box p {
+    font-size: 17px;
+}
+
+.lefttoday_number .widget-inline-box h3 {
+    font-size: 26px;
+}
+
+.lefttoday_number .widget-inline-box h4 {
+    font-size: 16px;
+}
+
+.lefttoday_number .widget-inline-box h4 img {
+}
+
+#lefttoday_echarts {
+    height: 15%;
+    /* border: 1px solid; */
+    clear: both;
+    padding: 2% 0;
+}
+
+.widget-inline-box {
+    padding: 3% 0px 5% 0;
+}
+
+#lefttoday_echarts2 {
+    height: 53%;
+}
+
+.lefttoday_ecartsImg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 140px;
+    margin-left: -70px;
+}
+
+.tith2 {
+    font-size: 18px;
+    padding-top: 3px;
+}
+
+#prbottom_box1 {
+    width: 90.1%;
+    margin-top: 1%;
+    margin-left: 5.2%;
+    height: 82.5%;
+}
+
+/* 人口分析 */
+.bdMap {
+    width: 91%;
+    height: 85%;
+    border: 1px solid;
+    margin-left: 4.7%;
+    margin-top: 2%;
+}

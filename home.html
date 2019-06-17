@@ -1,0 +1,620 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>景区圈一站式管理平台</title>
+<link href="css/comon0.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/jquery.limarquee.js" type="text/javascript"></script>
+
+
+<script src="js/echarts-new.min.js" charset="utf-8"></script>
+
+<script src="js/china.js"></script>
+
+<script src="js/fujian.js"></script>
+<script src="js/config.js" charset="utf-8"></script>
+<script src="js/index.js" charset="utf-8"></script>
+
+<body>
+<div class="wpbox">
+    <div class="bnt">
+        <div class="topbnt_left fl">
+            <ul>
+                <li class="active"><a href="home.html">综合分析</a></li>
+                <li><a href="public.html">舆情分析</a></li>
+                <li><a href="statistics.html">游客统计</a></li>
+            </ul>
+        </div>
+        <h1 class="tith1 fl">景区圈一站式综合服务管理平台</h1>
+        <div class=" topbnt_right">
+            <ul>
+                <li><a href="scenic.html">景区管理</a></li>
+
+                <li><a href="traffic.html">交通分析</a></li>
+
+                <span class="newDate"></span>
+
+            </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- bnt end -->
+    <div class="left1">
+        <div class="aleftboxttop">
+            <h2 class="tith2">游客数量统计</h2>
+
+            <div class="lefttoday_number">
+                <div class="widget-inline-box text-center fl">
+                    <p>当前游客</p>
+                    <h3 class="ceeb1fd">54121</h3>
+                    <h4 class="text-muted pt6">环比<img src="img/iconup.png" height="16"/>2%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>昨日游客</p>
+                    <h3 class="c24c9ff">124545</h3>
+                    <h4 class="text-muted pt6">环比<img src="img/icondown.png" height="16"/>3%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>今日营业额</p>
+                    <h3 class="cffff00">845151</h3>
+                    <h4 class="text-muted pt6">环比<img src="img/iconup.png" height="16"/>3%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>昨日营业额</p>
+                    <h3 class="c11e2dd">601541</h3>
+                    <h4 class="text-muted pt6">环比<img src="img/icondown.png" height="16"/>3%</h4>
+                </div>
+            </div>
+            <!-- lefttoday_number end -->
+        </div>
+        <div class="aleftboxtmidd">
+            <h2 class="tith2">票务渠道统计</h2>
+            <div id="aleftboxtmidd" class="aleftboxtmiddcont"></div>
+        </div>
+        <div class="aleftboxtbott">
+            <h2 class="tith2">景点热度排行</h2>
+            <div id="aleftboxtbott" class="aleftboxtbott_cont"></div>
+        </div>
+    </div>
+    <!--  left1 end -->
+    <div class="mrbox">
+        <div class="mrbox_topmidd" style="width: 60%;">
+            <div class="amiddboxttop">
+                <h2 class="tith2 ">实时客源统计</h2>
+                <div class="amiddboxttop_map" style="">
+                    <iframe src="map.html" frameborder="0" scrolling="no"
+                            style="width: 100%;height: 100%;"></iframe>
+                </div>
+            </div>
+            <!--  amiddboxttop end-->
+            <div class="amidd_bott">
+                <div class="amiddboxtbott1 fl">
+                    <h2 class="tith2 ">游客热力分布</h2>
+                    <div id="amiddboxtbott1" class="amiddboxtbott1content"></div>
+                </div>
+
+                <div class="amiddboxtbott2 fl">
+                    <h2 class="tith2 ">年度客流统计</h2>
+                    <div id="amiddboxtbott2" class="amiddboxtbott2content"></div>
+                </div>
+            </div>
+            <!-- amidd_bott end -->
+        </div>
+        <!-- mrbox_top end -->
+        <div class="mrbox_top_right">
+            <div class="arightboxtop">
+                <h2 class="tith2">景区圈舆情监测系统</h2>
+                <div class="lefttoday_tit">
+                    <p class="fl">今日最新舆情</p>
+                    <p class="fr">时间段：2018-06-10</p>
+                </div>
+                <div class="left2_table wrap">
+                    <ul>
+                        <li>
+                            <h3>央视一套官方微博--微博</h3>
+                            <p class="fl jqfl">
+                                《航拍中国》第二季视频：#江山如此多娇#【这里似乎有这个星球最初的慢和从容】在武夷山，能看九曲溪的十八弯，能见玉女峰，能品上好的茶叶。武夷山桐木村早在宋代已经种植茶树，这里出产的红茶“<b
+                                    style="color:#14FF00;">正山小种</b>”据考证是世界红茶的起源。200年前，武夷山下梅村是闽北最大的茶叶交易市场。每到产茶季节，当溪上日行竹筏300艘，转运不绝。戳视频，看航拍中的武夷山
+                            </p>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <h3>福建环境--微博</h3>
+                            <p class="fl">
+                                #高素质高颜值福建#
+                                【八闽生态环境协奏曲——<b
+                                    style="color:#14FF00;">武夷山</b>深处的大气环境“耳目”】在武夷山国家自然保护区深处，有一座叫摩天岭的山峰，在海拔1139米的山顶上伫立着一座国家背景环境空气质量监测站——福建武夷山站。
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <h3>黄师傅的悦生活--微博</h3>
+                            <p class="fl">
+                                《印象大红袍》可能因为是张艺谋和王潮歌导演早期的作品，<b
+                                    style="color: #ef3832;">故事性一般</b>，没有细说茶马古道，而是讲了几段编出来的神话故事。亮点是360度旋转舞台，引得现场一阵阵惊呼。还是要感谢两位的印象大红袍，不然武夷山的夜晚还是挺无聊的。比之前看过的印象刘三姐好看一点点
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <h3>武夷山环保局局长解释水污染问题时<b style="color: #ef3832;">爆粗--人民日报</b></h3>
+                            <p class="fl">
+                                当官员向居民解释环境问题但不被理解怎么办？福建武夷山市环保局局长情急之下爆粗口引发舆论关注。
+                                5月5日，福建武夷山市网友“清霜师太”在微信朋友圈调侃武夷山官方微信公众号发布的崇阳溪水质监测数据，以及居民对环境的满意度调查数据，随后该市环保局局长王继文在微信中针对相关问题向她进行了解释。
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <h3>天价武夷山岩茶市场水多深--环球健康</h3>
+                            <p class="fl">
+                                近几年来，武夷山的岩茶，风头很足，简单的一盒茶叶，动辄就是所谓大师手工制作，著名坑口的原料，每斤上万元、十几万元甚至几十万元。很多消费者都在发出疑问，这些充满传说、故事连篇的天价岩茶，真的值那么多钱吗？<b
+                                    style="color: #ef3832;">315</b>在行动的记者走进了武夷山茶区进行了调查。
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <h3>福建武夷山客流平稳有序 茶体验游成亮点--央视网</h3>
+                            <p class="fl">
+                                央视网消息：昨天，福建武夷山<b
+                                    style="color:#14FF00;">客流</b>平稳有序。虽然自驾游、休闲度假游依然是主要的旅游方式，但研学游、茶体验游等新业态旅游方式也备受游客青睐。
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <h3>多名“卖茶女”被抓，还都说自己来自<b style="color:#14FF00;">武夷山</b>--微信公众号</h3>
+                            <p class="fl">
+                                网络的发展令人们的社交方式正在悄悄发生改变，各种类型的即时聊天工具也成为了人们网络生活中不可缺少的一部分。然而，在流量庞大的各种社交聊天软件当中，也有不少不法分子动起了歪脑筋，在虚拟的网络背后，你永远不知道和你隔着屏幕聊天的那个人，究竟是何方的妖魔鬼怪
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <h3>武夷山<b style="color: #ef3832;">天价</b>麝香肉 餐馆有意宰客结账竟要48元一两</h3>
+                            <p class="fl">
+                                继三亚天价扇贝后，福建被爆料称武夷山惊现天价麝香肉，点菜时口头告知本是“48元一份”的麝香肉，结账时却变成“48元一两”，中间差价如此大，不得不让人吃惊！
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="arightboxbott">
+                <h2 class="tith2 ">停车场车辆实时数据</h2>
+                <div id="arightboxbott" class="arightboxbottcont" style=""></div>
+            </div>
+        </div>
+        <!-- mrbox_top_right end -->
+    </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtmidd'));
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{b} : {d}%"
+        },
+        legend: {
+            right: 10,
+            top: 30,
+            height: 140,
+            itemWidth: 10,
+            itemHeight: 10,
+            itemGap: 10,
+            textStyle: {
+                color: 'rgba(255,255,255,.6)',
+                fontSize: 12
+            },
+            orient: 'vertical',
+            data: ['窗口购票', '官网购票', '线上分销', '团体票', 'OTA渠道']
+        },
+        calculable: true,
+        series: [
+            {
+                name: ' ',
+                color: ['#ff4343', '#f69846', '#f6d54a', '#45dbf7', '#5045f6', '#4777f5', '#ad46f3', '#44aff0'],
+                type: 'pie',
+                radius: [30, 100],
+                center: ['40%', '50%'],
+                roseType: 'radius',
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'inside'
+                    },
+                    emphasis: {
+                        show: true
+                    },
+
+                },
+
+                lableLine: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+
+                data: [
+                    {value: 10, name: '窗口购票'},
+                    {value: 15, name: '官网购票'},
+                    {value: 25, name: '线上分销'},
+                    {value: 30, name: '团体票'},
+                    {value: 30, name: 'OTA渠道'}
+                ]
+            },
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtbott'));
+    option = {
+        tooltip: {
+            show: true
+        },
+        color: ['#7ecef4'],
+        // backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 20,
+            right: 20,
+            top: 13,
+            bottom: 6,
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,0)'
+                }
+            },
+            axisLabel: {
+                show: true,
+                color: "rgba(255,255,255,0)"
+            },
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.5)",
+                show: true
+            },
+            data: ['四面佛', '九仙山', '澳角村', '铜山古城', '苏峰山', '南门湾', '东门屿', '马銮湾', '风动石', '尖峰山']
+
+            // data: ['宋街', '水帘洞', '玉女峰', '大王峰', '武夷宫', '青龙大瀑布', '印象大红袍', '虎啸岩', '天游峰', '武夷山九曲溪']
+        },
+        series: [
+            {
+                name: '景点客流量',
+                type: 'bar',
+                barWidth: 20,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(75,240,255,0.7)'},
+                                {offset: 1, color: 'rgba(3,42,114,0.7)'}
+                            ]
+                        )
+                    }
+                },
+                label: {
+                    normal: {
+                        formatter: '{c}',
+                        position: 'insideRight',
+                        show: true,
+                        color: '#fff',
+                    }
+                },
+                data: [12154, 15454, 18203, 18789, 23489, 29034, 30124, 35145, 38415, 25112]
+            }]
+    };
+    myChart.setOption(option);
+    aniScenic(myChart);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('amiddboxtbott1'));
+    option = {
+
+        tooltip: {
+            trigger: 'item',
+            formatter: '{c} (人)'
+        },
+
+        visualMap: {
+            // itemHeight: 0,
+            min: 800,
+            max: 60000,
+            // text: ['High', 'Low5'],
+            realtime: false,
+            show: true,
+            calculable: true,
+            left: "20",
+            textStyle: {
+                color: "white"
+            },
+            inRange: {
+                color: ['aqua', 'lime', 'yellow', 'orange', '#ff3333']
+            }
+        },
+        series: [
+            {
+                x: '170',
+                name: '景区热力分布图',
+                type: 'map',
+                mapType: '福建', // 自定义扩展图表类型
+                itemStyle: {
+                    normal: {
+                        label: {show: false}
+                    },
+                    emphasis: {label: {show: false}}
+                },
+                zoom: 1.2,
+                data: [
+                    {name: '南平市', value: 1857},
+                    {name: '宁德市', value: 15477},
+                    {name: '福州市', value: 31681},
+                    {name: '莆田市', value: 6926},
+                    {name: '厦门市', value: 44045},
+                    {name: '三明市', value: 40689},
+                    {name: '龙岩市', value: 37659},
+                    {name: '福州市', value: 45180},
+                    {name: '泉州市', value: 55204},
+                    {name: '漳州市', value: 21900},
+
+                ]
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+
+</script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('amiddboxtbott2'));
+    option = {
+        tooltip: {
+            show: true
+        },
+        // backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 60,
+            right: 60,
+            top: 50,
+            bottom: 40
+        },
+
+        toolbox: {
+            // feature: {
+            //     dataView: { show: true, readOnly: false },
+            //     magicType: { show: true, type: ['line', 'bar'] },
+            //     restore: { show: true },
+            //     saveAsImage: { show: true }
+            // }
+        },
+        legend: {
+            top: 10,
+            textStyle: {
+                fontSize: 10,
+                color: 'rgba(255,255,255,.7)'
+            },
+            data: ['去年', '今年', '同比增速']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    color: "rgba(255,255,255,.7)"
+                },
+
+                data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 250,
+                interval: 50,
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} 万人'
+                }
+            },
+            {
+                type: 'value',
+                name: '',
+                max: 25,
+                interval: 5,
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                }
+            }
+        ],
+        series: [
+
+            {
+                name: '去年',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#5045F6'},
+                                {offset: 1, color: '#121b87'}
+                            ]
+                        )
+                    }
+                },
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '今年',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#4BF0FF'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '同比增速',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#FFEA51'},
+                                {offset: 1, color: '#FFEA51 '}
+                            ]
+                        )
+                    }
+                },
+                yAxisIndex: 1,
+                data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('arightboxbott'));
+    option = {
+        color: ['#4BF0FF'],
+        // backgroundColor: 'rgba(1,202,217,.2)',
+
+        grid: {
+            left: '5%',
+            right: '8%',
+            bottom: '7%',
+            top: '8%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                // saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.7)"
+            },
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.7)"
+            },
+        },
+        series: [
+            {
+                name: '2014年',
+                type: 'line',
+                stack: '总量',
+                areaStyle: {normal: {}},
+            }
+
+        ]
+    };
+    myChart.setOption(option);
+    aniPark(myChart);
+</script>
+<script>
+
+    var wrap = $(".wrap").html();
+    $(".wrap").html(wrap.replace(/武夷山/g, "东山"));
+
+
+</script>
+
+</body>
+
+</html>

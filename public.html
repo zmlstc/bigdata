@@ -1,0 +1,2431 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>舆情分析</title>
+<link href="css/comon0.css" rel="stylesheet" type="text/css"/>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link rel="stylesheet" href="css/edit.css">
+<link rel="stylesheet" href="css/public-edit.css">
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/jquery.limarquee.js" type="text/javascript"></script>
+
+<!-- <script src="js/echarts.min.js" charset="utf-8"></script> -->
+<script src="js/echarts-new.min.js"></script>
+<script src="js/echarts-wordcloud.min.js"></script>
+<script src="js/public.js" charset="utf-8"></script>
+
+<!-- <script src=""></script> -->
+
+<body>
+<div class="bnt">
+    <div class="topbnt_left fl">
+        <ul>
+            <li><a href="home.html">综合分析</a></li>
+            <li class="active"><a href="public.html">舆情分析</a></li>
+            <li><a href="statistics.html">游客统计</a></li>
+        </ul>
+    </div>
+    <h1 class="tith1 fl">舆情分析</h1>
+    <div class=" topbnt_right">
+        <ul>
+            <li><a href="scenic.html">景区管理</a></li>
+
+            <li><a href="traffic.html">交通分析</a></li>
+
+            <span class="newDate"></span>
+
+        </ul>
+        </ul>
+    </div>
+</div>
+<!-- bnt end -->
+<div class="puleft fl">
+    <div class="pulefttop">
+        <h2 class="tith2 tith2Edit"><span>舆情来源分析</span></h2>
+
+        <div class="box pbox">
+            <section>
+                <p>东山天价海鲜</p>
+                <div id="pbox_1">
+
+                </div>
+                <div id="pbox_2">
+                    <div>
+                        <p class="pboxContentTitle">当前</p>
+                        <p class="pboxContentText">热度指数: <span class="pboxContentGn">8[低]</span></p>
+                        <p class="pboxContentText">发展趋势: <span class="pboxContentBe">↓下降</span></p>
+                        <p class="pboxContentTitle">一周内</p>
+                        <p class="pboxContentText">数据总量: <span class="pboxContentRd">185条</span></p>
+                        <p class="pboxContentText">相关站点: <span class="pboxContentRd">59个</span></p>
+                        <p class="pboxContentText">参与网民: <span class="pboxContentRd">32个</span></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <p>东山海滨溺死事故</p>
+                <div id="pbox_3">
+
+                </div>
+                <div id="pbox_4">
+                    <div>
+                        <p class="pboxContentTitle">当前</p>
+                        <p class="pboxContentText">热度指数: <span class="pboxContentGn">18[低]</span></p>
+                        <p class="pboxContentText">发展趋势: <span class="pboxContentBe">↓下降</span></p>
+                        <p class="pboxContentTitle">一周内</p>
+                        <p class="pboxContentText">数据总量: <span class="pboxContentRd">1300条</span></p>
+                        <p class="pboxContentText">相关站点: <span class="pboxContentRd">119个</span></p>
+                        <p class="pboxContentText">参与网民: <span class="pboxContentRd">380个</span></p>
+                    </div>
+                </div>
+            </section>
+            <!-- <div class="aleftboxtmiddcont" id="aleftboxtmiddcont"> -->
+
+        </div>
+        <!-- lefttoday_number end -->
+    </div>
+    <div class="puleftboxtmidd" style="display:none;">
+        <h2 class="tith2 ">舆情区域分析</h2>
+
+        <div class="box pbox">
+            <div id="puleftboxtmidd1" class="fl puleftboxtmidd1"></div>
+            <div class="pvr fr pulefttoday_bar2">
+                <ul>
+                    <li class="hot1">1</li>
+                    <li class="hot2">2</li>
+                    <li class="hot3">3</li>
+                    <li class="hot4">4</li>
+                    <li class="hot5">5</li>
+                </ul>
+                <div id="puleftboxtmidd2" class="puleftbox2bott_cont"></div>
+            </div>
+        </div>
+    </div>
+    <div class="puleftboxtbott">
+        <h2 class="tith2">网站传播分布</h2>
+
+        <div class="box pbox">
+            <div id="puleftboxtbott1" class="fl puleftboxtbott1"></div>
+            <!-- <div class="puleftboxtbott2 fr">
+              <div class="widget-inline-box text-center ">
+                <p>今日舆情总数</p>
+                <h3 class=" ceeb1fd">54</h3>
+                <h4 class="text-muted ">环比<img src="img/iconup.png" height="16" />2%</h4>
+              </div>
+              <div class="widget-inline-box text-center ">
+                <p>本周舆情总数</p>
+                <h3 class=" c24c9ff">54</h3>
+                <h4 class="text-muted ">环比<img src="img/icondown.png" height="16" />3%</h4>
+              </div>
+              <div class="widget-inline-box text-center ">
+                <p>本月舆情总数</p>
+                <h3 class=" cffff00">4</h3>
+                <h4 class="text-muted ">环比<img src="img/icondown.png" height="16" />3%</h4>
+              </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!--  left1 end -->
+<div class="fl pt6 puleft2">
+    <div class="pmidd_bott">
+        <div class="pumiddboxttop1 fl">
+            <h2 class="tith2 pt3">舆情统计</h2>
+
+            <div class="puleft2height">
+                <div class="widget-inline-box text-center ">
+                    <p>今日舆情总数</p>
+                    <h3 class=" ceeb1fd f30">54</h3>
+                    <h4 class="text-muted ">环比<img src="img/iconup.png" height="16"/>2%</h4>
+                </div>
+                <div class="widget-inline-box text-center ">
+                    <p>昨日舆情总数</p>
+                    <h3 class=" c24c9ff f30">151</h3>
+                    <h4 class="text-muted ">环比<img src="img/icondown.png" height="16"/>3%</h4>
+                </div>
+                <div class="widget-inline-box text-center ">
+                    <p>本周舆情总数</p>
+                    <h3 class=" cffff00 f30">601</h3>
+                    <h4 class="text-muted ">环比<img src="img/icondown.png" height="16"/>3%</h4>
+                </div>
+                <div class="widget-inline-box text-center ">
+                    <p>上周舆情总数</p>
+                    <h3 class=" ceeb1fd f30">753</h3>
+                    <h4 class="text-muted ">环比<img src="img/iconup.png" height="16"/>2%</h4>
+                </div>
+                <div class="widget-inline-box text-center ">
+                    <p>本月舆情总数</p>
+                    <h3 class=" cffff00 f30">1630</h3>
+                    <h4 class="text-muted ">环比<img src="img/icondown.png" height="16"/>3%</h4>
+                </div>
+                <div class="widget-inline-box text-center ">
+                    <p>上月舆情总数</p>
+                    <h3 class=" ceeb1fd f30">2710</h3>
+                    <h4 class="text-muted ">环比<img src="img/iconup.png" height="16"/>2%</h4>
+                </div>
+            </div>
+        </div>
+        <div class="pumiddboxttop2 fl">
+            <h2 class="tith2 pt3">热门信息</h2>
+
+
+            <div class="left2_table wrap ">
+                <ul>
+                    <li>
+                        <h3>央视一套官方微博--微博</h3>
+                        <p class="fl jqfl">
+                            《航拍中国》第二季视频：#江山如此多娇#【这里似乎有这个星球最初的慢和从容】在武夷山，能看九曲溪的十八弯，能见玉女峰，能品上好的茶叶。武夷山桐木村早在宋代已经种植茶树，这里出产的红茶“<b
+                                style="color:#14FF00;">正山小种</b>”据考证是世界红茶的起源。200年前，武夷山下梅村是闽北最大的茶叶交易市场。每到产茶季节，当溪上日行竹筏300艘，转运不绝。戳视频，看航拍中的武夷山
+                        </p>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <h3>福建环境--微博</h3>
+                        <p class="fl">
+                            #高素质高颜值福建#
+                            【八闽生态环境协奏曲——<b
+                                style="color:#14FF00;">武夷山</b>深处的大气环境“耳目”】在武夷山国家自然保护区深处，有一座叫摩天岭的山峰，在海拔1139米的山顶上伫立着一座国家背景环境空气质量监测站——福建武夷山站。
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <h3>黄师傅的悦生活--微博</h3>
+                        <p class="fl">
+                            《印象大红袍》可能因为是张艺谋和王潮歌导演早期的作品，<b
+                                style="color: #ef3832;">故事性一般</b>，没有细说茶马古道，而是讲了几段编出来的神话故事。亮点是360度旋转舞台，引得现场一阵阵惊呼。还是要感谢两位的印象大红袍，不然武夷山的夜晚还是挺无聊的。比之前看过的印象刘三姐好看一点点
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <h3>武夷山环保局局长解释水污染问题时<b style="color: #ef3832;">爆粗--人民日报</b></h3>
+                        <p class="fl">
+                            当官员向居民解释环境问题但不被理解怎么办？福建武夷山市环保局局长情急之下爆粗口引发舆论关注。
+                            5月5日，福建武夷山市网友“清霜师太”在微信朋友圈调侃武夷山官方微信公众号发布的崇阳溪水质监测数据，以及居民对环境的满意度调查数据，随后该市环保局局长王继文在微信中针对相关问题向她进行了解释。
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <h3>天价武夷山岩茶市场水多深--环球健康</h3>
+                        <p class="fl">
+                            近几年来，武夷山的岩茶，风头很足，简单的一盒茶叶，动辄就是所谓大师手工制作，著名坑口的原料，每斤上万元、十几万元甚至几十万元。很多消费者都在发出疑问，这些充满传说、故事连篇的天价岩茶，真的值那么多钱吗？<b
+                                style="color: #ef3832;">315</b>在行动的记者走进了武夷山茶区进行了调查。
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <h3>福建武夷山客流平稳有序 茶体验游成亮点--央视网</h3>
+                        <p class="fl">
+                            央视网消息：昨天，福建武夷山<b
+                                style="color:#14FF00;">客流</b>平稳有序。虽然自驾游、休闲度假游依然是主要的旅游方式，但研学游、茶体验游等新业态旅游方式也备受游客青睐。
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <h3>多名“卖茶女”被抓，还都说自己来自<b style="color:#14FF00;">武夷山</b>--微信公众号</h3>
+                        <p class="fl">
+                            网络的发展令人们的社交方式正在悄悄发生改变，各种类型的即时聊天工具也成为了人们网络生活中不可缺少的一部分。然而，在流量庞大的各种社交聊天软件当中，也有不少不法分子动起了歪脑筋，在虚拟的网络背后，你永远不知道和你隔着屏幕聊天的那个人，究竟是何方的妖魔鬼怪
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <h3>武夷山<b style="color: #ef3832;">天价</b>麝香肉 餐馆有意宰客结账竟要48元一两</h3>
+                        <p class="fl">
+                            继三亚天价扇贝后，福建被爆料称武夷山惊现天价麝香肉，点菜时口头告知本是“48元一份”的麝香肉，结账时却变成“48元一两”，中间差价如此大，不得不让人吃惊！
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--  amidd_bott end-->
+    <div class="pmiddboxtbott">
+        <h2 class="tith2">舆情同比分析</h2>
+        <div id="purightboxmidd" class="purightboxmiddcont"></div>
+        <!-- <div class="box pbox">
+          <div id="pumiddboxtbott1" class="fl pumiddboxtbott1cont"></div>
+          <div class="pumiddboxtbott2 fr">
+            <div class="widget-inline-box text-center ">
+              <p>今年舆情总数</p>
+              <h3 class=" ceeb1fd f30">54</h3>
+              <h4 class="text-muted ">环比<img src="img/iconup.png" height="16" />2%</h4>
+            </div>
+
+          </div>
+        </div> -->
+    </div>
+    <!-- amidd_bott end -->
+</div>
+<!-- mrbox_top end -->
+<div class="mr_right fl">
+    <div class="purightboxtop">
+        <h2 class="tith2 ">舆情类别分析</h2>
+
+        <div id="purightboxtop" class="purightboxtopcont"></div>
+    </div>
+    <div class="purightboxmidd" style="display:none;">
+        <h2 class="tith2 ">数据源走势图</h2>
+
+
+    </div>
+    <div class="purightboxbott">
+        <h2 class="tith2 ">网站传播关系</h2>
+
+        <div id="purightboxbott" class="purightboxbottcont"></div>
+    </div>
+</div>
+<!-- mrbox_top_right end -->
+</div>
+
+
+</div>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtmiddcont'));
+    option = {
+        backgroundColor: '#174B78',
+
+        grid: {
+            x: 0,
+            x2: 0,
+            y: 0,
+            y2: 0
+        },
+
+        title: {
+            text: "",
+            subtext: "",
+            textStyle: {
+                color: "#fff",
+                fontSize: 18
+            },
+            top: "top",
+            left: "center"
+        },
+        tooltip: {},
+        legend: {show: false},
+        toolbox: {
+            show: false,
+            feature: {
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        animationDuration: 3000,
+        animationEasingUpdate: 'quinticInOut',
+        series: [{
+            name: '综合治理主题视图',
+            type: 'graph',
+            layout: 'force',
+
+            force: {
+                // initLayout: 'circular',
+                repulsion: 240,
+                gravity: 0.2,
+                edgeLength: 90
+            },
+
+
+            data: [{
+                "name": "综合治理主题",
+                "symbolSize": 24,
+                "category": "类目",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "组织能力指标",
+                "symbolSize": 10,
+                "category": "类目",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治机构组织情况",
+                "symbolSize": 8,
+                "category": "综治机构组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治机构总数",
+                "symbolSize": 6,
+                "category": "综治机构组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治机构成员总数",
+                "symbolSize": 6,
+                "category": "综治机构组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治办成员数",
+                "symbolSize": 4,
+                "category": "综治机构组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治委成员数",
+                "symbolSize": 4,
+                "category": "综治机构组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "专项组成员数",
+                "symbolSize": 4,
+                "category": "综治机构组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治网格分布情况",
+                "symbolSize": 8,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治网格数量",
+                "symbolSize": 6,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "南市街道网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "新兴街道网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "小白楼街道网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "体育馆街道网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "劝业场街道网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "南营门街道网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "教育系统网格数量",
+                "symbolSize": 4,
+                "category": "综治网格分布情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治团队构成情况",
+                "symbolSize": 8,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治团队数量",
+                "symbolSize": 6,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治团队成员数",
+                "symbolSize": 6,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "群防群治类团队成员数",
+                "symbolSize": 4,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "矛盾调解类团队成员数",
+                "symbolSize": 4,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "治安巡防类团队成员数",
+                "symbolSize": 4,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "医疗服务类团队成员数",
+                "symbolSize": 4,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "其他类类团队成员数",
+                "symbolSize": 4,
+                "category": "综治团队构成情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "研判分析指标",
+                "symbolSize": 10,
+                "category": "类目",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "实有人口情况",
+                "symbolSize": 8,
+                "category": "实有人口情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "实有人口数环比增长",
+                "symbolSize": 6,
+                "category": "实有人口情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "实有人口数量",
+                "symbolSize": 4,
+                "category": "实有人口情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "特殊人群情况",
+                "symbolSize": 8,
+                "category": "特殊人群情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "特殊人群数环比增长",
+                "symbolSize": 6,
+                "category": "特殊人群情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "特殊人群数量",
+                "symbolSize": 4,
+                "category": "特殊人群情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点少年情况",
+                "symbolSize": 8,
+                "category": "重点少年情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点少年数环比增长",
+                "symbolSize": 6,
+                "category": "重点少年情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点少年数量",
+                "symbolSize": 4,
+                "category": "重点少年情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "两新组织情况",
+                "symbolSize": 8,
+                "category": "两新组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会组织数环比增长",
+                "symbolSize": 6,
+                "category": "两新组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会组织数量",
+                "symbolSize": 4,
+                "category": "两新组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "新经济组织数环比增长",
+                "symbolSize": 6,
+                "category": "两新组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "新经济组织数量",
+                "symbolSize": 4,
+                "category": "两新组织情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "辖区房屋情况",
+                "symbolSize": 8,
+                "category": "辖区房屋情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "本年新增房屋数环比增长",
+                "symbolSize": 6,
+                "category": "辖区房屋情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "新增房屋数量",
+                "symbolSize": 4,
+                "category": "辖区房屋情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "存量房屋数环比增长",
+                "symbolSize": 6,
+                "category": "辖区房屋情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "存量房屋数量",
+                "symbolSize": 4,
+                "category": "辖区房屋情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "出租房流动情况",
+                "symbolSize": 8,
+                "category": "出租房流动情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "出租房屋数环比增长",
+                "symbolSize": 6,
+                "category": "出租房流动情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "出租房屋数量",
+                "symbolSize": 4,
+                "category": "出租房流动情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "出租房屋人口数环比增长",
+                "symbolSize": 6,
+                "category": "出租房流动情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "出租房屋人口数量",
+                "symbolSize": 4,
+                "category": "出租房流动情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "校园及周边安全情况",
+                "symbolSize": 8,
+                "category": "校园及周边安全情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "本年新建学校数量",
+                "symbolSize": 6,
+                "category": "校园及周边安全情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "现有学校总数",
+                "symbolSize": 6,
+                "category": "校园及周边安全情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会治安情况",
+                "symbolSize": 8,
+                "category": "社会治安情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会治安点数环比增长",
+                "symbolSize": 6,
+                "category": "社会治安情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会治安点数量",
+                "symbolSize": 4,
+                "category": "社会治安情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "工作态势指标",
+                "symbolSize": 10,
+                "category": "类目",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治事件情况",
+                "symbolSize": 8,
+                "category": "综治事件情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治事件数环比增长",
+                "symbolSize": 6,
+                "category": "综治事件情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治事件数量",
+                "symbolSize": 4,
+                "category": "综治事件情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "矛盾纠纷排查情况",
+                "symbolSize": 8,
+                "category": " 矛盾纠纷排查情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "矛盾纠纷排查数环比增长",
+                "symbolSize": 6,
+                "category": " 矛盾纠纷排查情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "矛盾纠纷排查数量",
+                "symbolSize": 4,
+                "category": " 矛盾纠纷排查情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "矛盾纠纷调处数环比增长",
+                "symbolSize": 6,
+                "category": " 矛盾纠纷排查情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "矛盾纠纷调处数量",
+                "symbolSize": 4,
+                "category": " 矛盾纠纷排查情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治服务开展情况",
+                "symbolSize": 8,
+                "category": "综治服务开展情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治服务数环比增长",
+                "symbolSize": 6,
+                "category": "综治服务开展情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治服务数量",
+                "symbolSize": 4,
+                "category": "综治服务开展情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治工作落实情况",
+                "symbolSize": 8,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "特殊人群帮教落实率环比增长",
+                "symbolSize": 6,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "特殊人群帮教率",
+                "symbolSize": 4,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点少年帮教率环比增长",
+                "symbolSize": 6,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点少年帮教率",
+                "symbolSize": 4,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "两新组织综治人员落实率环比增长",
+                "symbolSize": 6,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "两新组织落实率",
+                "symbolSize": 4,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "房屋综治人员落实率环比增长",
+                "symbolSize": 6,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "房屋落实率",
+                "symbolSize": 4,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点校园负责人落实率环比增长",
+                "symbolSize": 6,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "重点校园负责人落实率",
+                "symbolSize": 4,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会治安重点场所负责人落实率环比增长",
+                "symbolSize": 6,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "社会治安重点场所负责人落实率",
+                "symbolSize": 4,
+                "category": "综治工作落实情况",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "效能考核指标",
+                "symbolSize": 10,
+                "category": "类目",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "职能部门工作评价",
+                "symbolSize": 8,
+                "category": "职能部门工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "职能部门工作得分环比增长",
+                "symbolSize": 6,
+                "category": "职能部门工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "职能部门工作得分均值",
+                "symbolSize": 4,
+                "category": "职能部门工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道矛盾纠纷排查工作评价",
+                "symbolSize": 8,
+                "category": "街道矛盾纠纷排查工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道矛盾纠纷排查环比增长",
+                "symbolSize": 6,
+                "category": "街道矛盾纠纷排查工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "排查工作数量",
+                "symbolSize": 4,
+                "category": "街道矛盾纠纷排查工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道矛盾纠纷调处成功率环比增长",
+                "symbolSize": 6,
+                "category": "街道矛盾纠纷排查工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "调处成功率",
+                "symbolSize": 4,
+                "category": "街道矛盾纠纷排查工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道重点对象综治工作评价",
+                "symbolSize": 8,
+                "category": "街道重点对象综治工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道重点对象综治落实率环比增长",
+                "symbolSize": 6,
+                "category": "街道重点对象综治工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道重点对象综治落实数量",
+                "symbolSize": 4,
+                "category": "街道重点对象综治工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治事件工作评价",
+                "symbolSize": 8,
+                "category": "街道综治事件工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治事件环比增长",
+                "symbolSize": 6,
+                "category": "街道综治事件工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治事件数量",
+                "symbolSize": 4,
+                "category": "街道综治事件工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治事件结案率环比增长",
+                "symbolSize": 6,
+                "category": "街道综治事件工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治事件结案率",
+                "symbolSize": 4,
+                "category": "街道综治事件工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治服务工作评价",
+                "symbolSize": 8,
+                "category": "街道综治服务工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "综治服务工作量环比增长",
+                "symbolSize": 6,
+                "category": "街道综治服务工作评价",
+                "draggable": "true",
+                "value": 1
+            }, {
+                "name": "街道综治服务工作数量",
+                "symbolSize": 4,
+                "category": "街道综治服务工作评价",
+                "draggable": "true",
+                "value": 1
+            }],
+            links: [{
+                "source": "综合治理主题",
+                "target": "组织能力指标"
+            }, {
+                "source": "组织能力指标",
+                "target": "综治机构组织情况"
+            }, {
+                "source": "综治机构组织情况",
+                "target": "综治机构总数"
+            }, {
+                "source": "综治机构组织情况",
+                "target": "综治机构成员总数"
+            }, {
+                "source": "综治机构成员总数",
+                "target": "综治办成员数"
+            }, {
+                "source": "综治机构成员总数",
+                "target": "综治委成员数"
+            }, {
+                "source": "综治机构成员总数",
+                "target": "专项组成员数"
+            }, {
+                "source": "组织能力指标",
+                "target": "综治网格分布情况"
+            }, {
+                "source": "综治网格分布情况",
+                "target": "综治网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "南市街道网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "新兴街道网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "小白楼街道网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "体育馆街道网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "劝业场街道网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "南营门街道网格数量"
+            }, {
+                "source": "综治网格数量",
+                "target": "教育系统网格数量"
+            }, {
+                "source": "组织能力指标",
+                "target": "综治团队构成情况"
+            }, {
+                "source": "综治团队构成情况",
+                "target": "综治团队数量"
+            }, {
+                "source": "综治团队构成情况",
+                "target": "综治团队成员数"
+            }, {
+                "source": "综治团队成员数",
+                "target": "群防群治类团队成员数"
+            }, {
+                "source": "综治团队成员数",
+                "target": "矛盾调解类团队成员数"
+            }, {
+                "source": "综治团队成员数",
+                "target": "治安巡防类团队成员数"
+            }, {
+                "source": "综治团队成员数",
+                "target": "医疗服务类团队成员数"
+            }, {
+                "source": "综治团队成员数",
+                "target": "其他类类团队成员数"
+            }, {
+                "source": "综合治理主题",
+                "target": "研判分析指标"
+            }, {
+                "source": "研判分析指标",
+                "target": "实有人口情况"
+            }, {
+                "source": "实有人口情况",
+                "target": "实有人口数环比增长"
+            }, {
+                "source": "实有人口数环比增长",
+                "target": "实有人口数量"
+            }, {
+                "source": "研判分析指标",
+                "target": "特殊人群情况"
+            }, {
+                "source": "特殊人群情况",
+                "target": "特殊人群数环比增长"
+            }, {
+                "source": "特殊人群数环比增长",
+                "target": "特殊人群数量"
+            }, {
+                "source": "研判分析指标",
+                "target": "重点少年情况"
+            }, {
+                "source": "重点少年情况",
+                "target": "重点少年数环比增长"
+            }, {
+                "source": "重点少年数环比增长",
+                "target": "重点少年数量"
+            }, {
+                "source": "研判分析指标",
+                "target": "两新组织情况"
+            }, {
+                "source": "两新组织情况",
+                "target": "社会组织数环比增长"
+            }, {
+                "source": "社会组织数环比增长",
+                "target": "社会组织数量"
+            }, {
+                "source": "两新组织情况",
+                "target": "新经济组织数环比增长"
+            }, {
+                "source": "新经济组织数环比增长",
+                "target": "新经济组织数量"
+            }, {
+                "source": "研判分析指标",
+                "target": "辖区房屋情况"
+            }, {
+                "source": "辖区房屋情况",
+                "target": "本年新增房屋数环比增长"
+            }, {
+                "source": "本年新增房屋数环比增长",
+                "target": "新增房屋数量"
+            }, {
+                "source": "辖区房屋情况",
+                "target": "存量房屋数环比增长"
+            }, {
+                "source": "存量房屋数环比增长",
+                "target": "存量房屋数量"
+            }, {
+                "source": "研判分析指标",
+                "target": "出租房流动情况"
+            }, {
+                "source": "出租房流动情况",
+                "target": "出租房屋数环比增长"
+            }, {
+                "source": "出租房屋数环比增长",
+                "target": "出租房屋数量"
+            }, {
+                "source": "出租房流动情况",
+                "target": "出租房屋人口数环比增长"
+            }, {
+                "source": "出租房屋人口数环比增长",
+                "target": "出租房屋人口数量"
+            }, {
+                "source": "研判分析指标",
+                "target": "校园及周边安全情况"
+            }, {
+                "source": "校园及周边安全情况",
+                "target": "本年新建学校数量"
+            }, {
+                "source": "校园及周边安全情况",
+                "target": "现有学校总数"
+            }, {
+                "source": "研判分析指标",
+                "target": "社会治安情况"
+            }, {
+                "source": "社会治安情况",
+                "target": "社会治安点数环比增长"
+            }, {
+                "source": "社会治安点数环比增长",
+                "target": "社会治安点数量"
+            }, {
+                "source": "综合治理主题",
+                "target": "工作态势指标"
+            }, {
+                "source": "工作态势指标",
+                "target": "综治事件情况"
+            }, {
+                "source": "综治事件情况",
+                "target": "综治事件数环比增长"
+            }, {
+                "source": "综治事件数环比增长",
+                "target": "综治事件数量"
+            }, {
+                "source": "工作态势指标",
+                "target": "矛盾纠纷排查情况"
+            }, {
+                "source": " 矛盾纠纷排查情况",
+                "target": "矛盾纠纷排查数环比增长"
+            }, {
+                "source": "矛盾纠纷排查数环比增长",
+                "target": "矛盾纠纷排查数量"
+            }, {
+                "source": " 矛盾纠纷排查情况",
+                "target": "矛盾纠纷调处数环比增长"
+            }, {
+                "source": "矛盾纠纷调处数环比增长",
+                "target": "矛盾纠纷调处数量"
+            }, {
+                "source": "工作态势指标",
+                "target": "综治服务开展情况"
+            }, {
+                "source": "综治服务开展情况",
+                "target": "综治服务数环比增长"
+            }, {
+                "source": "综治服务数环比增长",
+                "target": "综治服务数量"
+            }, {
+                "source": "工作态势指标",
+                "target": "综治工作落实情况"
+            }, {
+                "source": "综治工作落实情况",
+                "target": "特殊人群帮教落实率环比增长"
+            }, {
+                "source": "特殊人群帮教落实率环比增长",
+                "target": "特殊人群帮教率"
+            }, {
+                "source": "综治工作落实情况",
+                "target": "重点少年帮教率环比增长"
+            }, {
+                "source": "重点少年帮教率环比增长",
+                "target": "重点少年帮教率"
+            }, {
+                "source": "综治工作落实情况",
+                "target": "两新组织综治人员落实率环比增长"
+            }, {
+                "source": "两新组织综治人员落实率环比增长",
+                "target": "两新组织落实率"
+            }, {
+                "source": "综治工作落实情况",
+                "target": "房屋综治人员落实率环比增长"
+            }, {
+                "source": "房屋综治人员落实率环比增长",
+                "target": "房屋落实率"
+            }, {
+                "source": "综治工作落实情况",
+                "target": "重点校园负责人落实率环比增长"
+            }, {
+                "source": "重点校园负责人落实率环比增长",
+                "target": "重点校园负责人落实率"
+            }, {
+                "source": "综治工作落实情况",
+                "target": "社会治安重点场所负责人落实率环比增长"
+            }, {
+                "source": "社会治安重点场所负责人落实率环比增长",
+                "target": "社会治安重点场所负责人落实率"
+            }, {
+                "source": "综合治理主题",
+                "target": "效能考核指标"
+            }, {
+                "source": "效能考核指标",
+                "target": "职能部门工作评价"
+            }, {
+                "source": "职能部门工作评价",
+                "target": "职能部门工作得分环比增长"
+            }, {
+                "source": "职能部门工作得分环比增长",
+                "target": "职能部门工作得分均值"
+            }, {
+                "source": "效能考核指标",
+                "target": "街道矛盾纠纷排查工作评价"
+            }, {
+                "source": "街道矛盾纠纷排查工作评价",
+                "target": "街道矛盾纠纷排查环比增长"
+            }, {
+                "source": "街道矛盾纠纷排查环比增长",
+                "target": "排查工作数量"
+            }, {
+                "source": "街道矛盾纠纷排查工作评价",
+                "target": "街道矛盾纠纷调处成功率环比增长"
+            }, {
+                "source": "街道矛盾纠纷调处成功率环比增长",
+                "target": "调处成功率"
+            }, {
+                "source": "效能考核指标",
+                "target": "街道重点对象综治工作评价"
+            }, {
+                "source": "街道重点对象综治工作评价",
+                "target": "街道重点对象综治落实率环比增长"
+            }, {
+                "source": "街道重点对象综治落实率环比增长",
+                "target": "街道重点对象综治落实数量"
+            }, {
+                "source": "效能考核指标",
+                "target": "街道综治事件工作评价"
+            }, {
+                "source": "街道综治事件工作评价",
+                "target": "街道综治事件环比增长"
+            }, {
+                "source": "街道综治事件环比增长",
+                "target": "街道综治事件数量"
+            }, {
+                "source": "街道综治事件工作评价",
+                "target": "街道综治事件结案率环比增长"
+            }, {
+                "source": "街道综治事件结案率环比增长",
+                "target": "街道综治事件结案率"
+            }, {
+                "source": "效能考核指标",
+                "target": "街道综治服务工作评价"
+            }, {
+                "source": "街道综治服务工作评价",
+                "target": "综治服务工作量环比增长"
+            }, {
+                "source": "综治服务工作量环比增长",
+                "target": "街道综治服务工作数量"
+            }],
+            categories: [{
+                "name": "类目"
+            }, {
+                "name": "综治机构组织情况"
+            }, {
+                "name": "综治网格分布情况"
+            }, {
+                "name": "综治团队构成情况"
+            }, {
+                "name": "实有人口情况"
+            }, {
+                "name": "特殊人群情况"
+            }, {
+                "name": "重点少年情况"
+            }, {
+                "name": "两新组织情况"
+            }, {
+                "name": "辖区房屋情况"
+            }, {
+                "name": "出租房流动情况"
+            }, {
+                "name": "校园及周边安全情况"
+            }, {
+                "name": "社会治安情况"
+            }, {
+                "name": "综治事件情况"
+            }, {
+                "name": " 矛盾纠纷排查情况"
+            }, {
+                "name": "综治服务开展情况"
+            }, {
+                "name": "综治工作落实情况"
+            }, {
+                "name": "职能部门工作评价"
+            }, {
+                "name": "街道矛盾纠纷排查工作评价"
+            }, {
+                "name": "街道重点对象综治工作评价"
+            }, {
+                "name": "街道综治事件工作评价"
+            }, {
+                "name": "街道综治服务工作评价"
+            }],
+
+            focusNodeAdjacency: true,
+            roam: true,
+            label: {
+                normal: {
+
+                    show: true,
+                    position: 'top',
+                    textStyle: {
+                        fontSize: 14
+                    }
+
+                }
+            },
+            lineStyle: {
+                normal: {
+                    color: 'source',
+                    curveness: 0
+                    //type: "solid"
+                }
+            }
+        }]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('puleftboxtmidd1'));
+    var data = [
+        [5000, 10000, 6785.71],
+        [4000, 10000, 6825],
+        [3000, 6500, 4463.33],
+        [2500, 5600, 3793.83],
+        [2000, 4000, 3060],
+        [2000, 4000, 3222.33],
+        [2500, 4000, 3133.33],
+        [1800, 4000, 3100],
+        [1500, 1800, 1650]
+    ];
+    var cities = ['甘孜县', '泸定县', '炉霍县', '色达县', '白玉县', '得荣县', '雅江县', '九龙县', '康定市'];
+    var barHeight = 50;
+    option = {
+        color: ['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 60,
+            right: 60,
+            top: 60,
+            bottom: 40
+        },
+        legend: {
+            show: true,
+            data: ['价格范围', '均值']
+        },
+        angleAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.7)"
+            },
+            data: cities
+        },
+        radiusAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.5)"
+            }
+        },
+        polar: {},
+        series: [{
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: 'transparent'
+                }
+            },
+            data: data.map(function (d) {
+                return d[0];
+            }),
+            coordinateSystem: 'polar',
+            stack: '最大最小值',
+            silent: true
+        }, {
+            type: 'bar',
+            data: data.map(function (d) {
+                return d[1] - d[0];
+            }),
+            coordinateSystem: 'polar',
+            name: '价格范围',
+            stack: '最大最小值'
+        }, {
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: 'transparent'
+                }
+            },
+            data: data.map(function (d) {
+                return d[2] - barHeight;
+            }),
+            coordinateSystem: 'polar',
+            stack: '均值',
+            silent: true,
+            z: 10
+        }, {
+            type: 'bar',
+            data: data.map(function (d) {
+                return barHeight * 2
+            }),
+            coordinateSystem: 'polar',
+            name: '均值',
+            stack: '均值',
+            barGap: '-100%',
+
+            z: 10
+        }],
+        legend: {
+            show: true,
+            data: ['A', 'B', 'C']
+        }
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('puleftboxtmidd2'));
+    option = {
+        color: ['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 40,
+            right: 20,
+            top: 30,
+            bottom: 0,
+            containLabel: true
+        },
+
+        xAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,0)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,0)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,0)"
+            },
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.5)"
+            },
+            data: ['微博', '网站', '新闻', '贴吧', '论坛']
+        },
+        series: [
+            {
+                name: '2011年',
+                type: 'bar',
+                barWidth: 20,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                            ]
+                        )
+                    }
+                },
+                data: [18203, 23489, 29034, 104970, 131744]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('puleftboxtbott1'));
+    var dataWB = [];
+
+    var dataWX = [];
+
+    var dataXW = [];
+    var dataLT = [];
+
+    var dataYD = [];
+    for (var i = 0; i < 30; i++) {
+        dataWB.push(
+            [
+                Math.round(Math.random() * 31),
+                Math.round(Math.random() * 100),
+                Math.round(Math.random() * 40)
+            ]
+        );
+        dataWX.push(
+            [
+                Math.round(Math.random() * 31),
+                Math.round(Math.random() * 100),
+                Math.round(Math.random() * 40)
+            ]
+        );
+        dataXW.push(
+            [
+                Math.round(Math.random() * 31),
+                Math.round(Math.random() * 100),
+                Math.round(Math.random() * 40)
+            ]
+        );
+        dataLT.push(
+            [
+                Math.round(Math.random() * 31),
+                Math.round(Math.random() * 100),
+                Math.round(Math.random() * 40)
+            ]
+        );
+        dataYD.push(
+            [
+                Math.round(Math.random() * 31),
+                Math.round(Math.random() * 100),
+                Math.round(Math.random() * 40)
+            ]
+        );
+    }
+    var schema = [
+        {name: 'date', index: 0, text: '日'},
+        {name: 'AQIindex', index: 1, text: '传播次数'},
+
+    ];
+
+
+    var itemStyle = {
+        normal: {
+            opacity: 0.8,
+            shadowBlur: 30,
+            shadowOffsetX: 0,
+            shadowOffsetY: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+    };
+
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color: ['#C33531', '#EFE42A', '#64BD3D', '#EE9201', '#29AAE3'],
+        legend: {
+            y: 'top',
+            data: ['微博', '微信', '新闻', '论坛', '移动客户端'],
+            textStyle: {
+                color: '#fff',
+                fontSize: 16
+            }
+        },
+        grid: {
+            x: '5%',
+            x2: '13%',
+            y: '18%',
+            y2: '15%'
+        },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#222',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                    + obj.seriesName + ' ' + value[0] + '日：'
+                    + '</div>'
+                    + schema[1].text + '：' + value[1] + '<br>';
+            }
+        },
+        xAxis: {
+            type: 'value',
+            name: '日期',
+            nameGap: 16,
+            nameTextStyle: {
+                color: '#fff',
+                fontSize: 14
+            },
+            max: 31,
+            splitLine: {
+                show: false
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#777'
+                }
+            },
+            axisTick: {
+                lineStyle: {
+                    color: '#777'
+                }
+            },
+            axisLabel: {
+                formatter: '{value}',
+                textStyle: {
+                    color: '#fff'
+                }
+            }
+        },
+        visualMap: [
+            {
+                show: false,
+                left: 'right',
+                top: '10%',
+                dimension: 2,
+                min: 0,
+                max: 250,
+                itemWidth: 30,
+                itemHeight: 120,
+                calculable: false,
+
+                precision: 0.1,
+                // text: ['圆形大小：PM2.5'],
+                textGap: 30,
+                textStyle: {
+                    color: '#fff'
+                },
+                inRange: {
+                    symbolSize: [5, 100]
+                },
+                outOfRange: {
+                    // symbolSize: [5, 200],
+                    color: ['rgba(255,255,255,.2)']
+                },
+                controller: {
+                    inRange: {
+                        color: ['#c23531']
+                    },
+                    outOfRange: {
+                        color: ['#444']
+                    }
+                }
+            },
+        ],
+        yAxis: {
+
+            type: 'value',
+            name: 'AQI指数',
+            nameLocation: 'end',
+            nameGap: 20,
+            nameTextStyle: {
+                color: '#fff',
+                fontSize: 16
+            },
+            // axisLine: {
+            //     lineStyle: {
+            //         color: '#777'
+            //     }
+            // },
+            // axisTick: {
+            //     lineStyle: {
+            //         color: '#777'
+            //     }
+            // },
+            // splitLine: {
+            //     show: false
+            // },
+            show: false,
+            axisLabel: {
+                textStyle: {
+                    color: '#fff'
+                }
+            }
+        },
+
+        series: [
+
+            {
+                name: '微博',
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: dataWB
+            },
+            {
+                name: '微信',
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: dataWX
+            },
+            {
+                name: '新闻',
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: dataXW
+            },
+            {
+                name: '论坛',
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: dataLT
+            },
+            {
+                name: '移动客户端',
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: dataYD
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pumiddboxtbott1'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 60,
+            right: 60,
+            top: 70,
+            bottom: 40
+        },
+
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            top: 10,
+            textStyle: {
+                fontSize: 10,
+                color: 'rgba(255,255,255,.7)'
+            },
+            data: ['2017年', '2018年', '同比增速']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    color: "rgba(255,255,255,.7)"
+                },
+
+                data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 250,
+                interval: 50,
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} ml'
+                }
+            },
+            {
+                type: 'value',
+                name: '',
+                max: 25,
+                interval: 5,
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            }
+        ],
+        series: [
+
+            {
+                name: '2017年',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#b266ff'},
+                                {offset: 1, color: '#121b87'}
+                            ]
+                        )
+                    }
+                },
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '2018年',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#00f0ff'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '同比增速',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#fffb34'},
+                                {offset: 1, color: '#fffb34'}
+                            ]
+                        )
+                    }
+                },
+                yAxisIndex: 1,
+                data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('purightboxtop'));
+
+
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: '20',
+            y: 'center',
+            data: ['新闻', '论坛', '微博', '博客', '微信', 'facebook', '移动客户端'],
+            textStyle: {
+                color: "white"
+            }
+        },
+        series: [
+            {
+                color: ['#2ec7cb', '#b7a5d7', '#5caff1', '#fbbd81', '#d97a7f', '#8e9dad', '#ebce0e', '#95b552', '#96716d'],
+                name: '访问来源',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                center: ['60%', '50%'],
+                avoidLabelOverlap: true,
+
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data: [
+                    {value: 335, name: '新闻'},
+                    {value: 310, name: '论坛'},
+                    {value: 234, name: '微博'},
+
+                    {value: 1548, name: '博客'},
+                    {value: 335, name: '微信'},
+
+                    {value: 234, name: 'facebook'},
+                    {value: 135, name: '移动客户端'},
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('purightboxmidd'));
+    option = {
+        //  color:function(params){
+        //         var colorarrays = ["#2F9323","#D9B63A","#2E2AA4","#9F2E61","#4D670C","#BF675F","#1F814A","#357F88","#673509","#310937","#1B9637","#F7393C"];
+        //         return colorarrays[params.dataIndex];
+        //     },
+        color: ['#7de494', '#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        legend: {
+            data: ['微博', '微信', '博客', '新闻', '移动客户端'],
+            align: 'left',
+            bottom: '0',
+            textStyle: {
+                // color:['#7de494', '#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'],
+                // color:"pink"
+                color: function (params) {
+                    var colorarrays = ['#7de494', '#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'];
+                    return colorarrays[params.dataIndex];
+                },
+            }
+        },
+        grid: {
+            left: 30,
+            right: 40,
+            top: 20,
+            bottom: 30,
+            containLabel: true
+        },
+
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.7)"
+            },
+            data: ['6-08', '6-09', '6-10', '6-11', '6-12', '6-13', '6-14']
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.7)"
+            },
+        },
+        series: [
+
+            {
+                name: '微博',
+                type: 'line',
+                stack: '总量',
+                //   areaStyle: { normal: {} },
+                data: [1344, 1501, 701, 600, 490, 230, 0],
+                itemStyle: {
+                    normal: {
+                        color: '#7de494', //改变折线点的颜色
+                        lineStyle: {
+                            color: '#7de494' //改变折线颜色
+                        }
+                    }
+                },
+            },
+            {
+                name: '微信',
+                type: 'line',
+                stack: '总1量',
+                //   areaStyle: { normal: {} },
+                data: [1210, 1320, 1010, 1340, 900, 2300, 0],
+                itemStyle: {
+                    normal: {
+                        color: '#00b7ee', //改变折线点的颜色
+                        lineStyle: {
+                            color: '#00b7ee' //改变折线颜色
+                        }
+                    }
+                },
+            },
+            {
+                name: '博客',
+                type: 'line',
+                stack: '总量2',
+                //   areaStyle: { normal: {} },
+                data: [1300, 1201, 1300, 1400, 1000, 1510, 210],
+                itemStyle: {
+                    normal: {
+                        color: '#5578cf', //改变折线点的颜色
+                        lineStyle: {
+                            color: '#5578cf' //改变折线颜色
+                        }
+                    }
+                },
+            },
+            {
+                name: '新闻',
+                type: 'line',
+                stack: '总量3',
+                //   areaStyle: { normal: {} },
+                data: [600, 700, 750, 504, 490, 300, 110], itemStyle: {
+                    normal: {
+                        color: '#5ebbeb', //改变折线点的颜色
+                        lineStyle: {
+                            color: '#5ebbeb' //改变折线颜色
+                        }
+                    }
+                },
+            },
+            {
+                name: '移动客户端',
+                type: 'line',
+                stack: '总量4',
+                //   areaStyle: { normal: {} },
+                data: [2000, 2300, 2200, 2350, 1900, 1600, 1210],
+                itemStyle: {
+                    normal: {
+                        color: '#d16ad8', //改变折线点的颜色
+                        lineStyle: {
+                            color: '#d16ad8' //改变折线颜色
+                        }
+                    }
+                },
+            }
+
+        ]
+    };
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('purightboxbott'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        title: {
+            text: ''
+        },
+        grid: {
+            top: "130"
+        },
+        color: function (params) {
+            var colorarrays = ['#7de494', '#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee',];
+            return colorarrays[params.dataIndex];
+        },
+
+
+        animationDurationUpdate: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        label: {
+            normal: {
+                show: true,
+                textStyle: {
+                    fontSize: 12
+                },
+            }
+        },
+        legend: [{
+            formatter: function (name) {
+                return echarts.format.truncateText(name, 50, '14px Microsoft Yahei', '…');
+            },
+
+            // selectedMode: 'false',
+            // bottom: 20,
+            data: ['新华网：100', '搜狐：150', '网易：194', '腾讯网：201', '人民网：120', '今日头条：259', '一点资讯：270'],
+            textStyle: {
+                color: "white"
+            },
+            top: '20',
+
+        }],
+
+        tooltip: {formatter: "{b}", position: "bottom"},
+        // trigger: 'axis',
+
+        series: [
+
+
+            {
+                top: '90',
+                // 显示数值
+                itemStyle: {normal: {label: {show: false}}},
+                type: 'graph',
+                layout: 'force',
+
+                symbolSize: 45,
+                focusNodeAdjacency: false,
+                //roam: true,
+                draggable: false,
+                categories: [
+                    {
+                        name: '转发媒体',
+                        itemStyle: {
+                            normal: {
+                                color: "pink"
+                            }
+                        }
+
+                    }, {
+                        name: '新华网：100',
+
+                        itemStyle: {
+                            normal: {
+                                color: "#7de494"
+                            }
+                        }
+                    }, {
+                        name: '搜狐：150',
+                        itemStyle: {
+                            normal: {
+                                color: "#7fd7b1",
+                            }
+                        }
+                    }, {
+                        name: '网易：194',
+                        itemStyle: {
+                            normal: {
+                                color: "#5578cf",
+                            }
+                        }
+                    }, {
+                        name: '腾讯网：201',
+                        itemStyle: {
+                            normal: {
+                                color: "#5ebbeb",
+                            }
+                        }
+                    }, {
+                        name: '人民网：120',
+                        itemStyle: {
+                            normal: {
+                                color: "#d16ad8",
+                            }
+                        }
+                    }, {
+                        name: '今日头条：259',
+                        itemStyle: {
+                            normal: {
+                                color: "#f8e19a",
+                            }
+                        }
+                    }, {
+                        name: '一点资讯：270',
+                        itemStyle: {
+                            normal: {
+                                color: "#00b7ee",
+                            }
+                        }
+                    }],
+                label: {
+                    normal: {
+
+                        show: true,
+                        position: 'top',
+
+                    }
+                },
+                force: {
+                    repulsion: 1000
+                },
+                edgeSymbolSize: [4, 50],
+                edgeLabel: {
+                    normal: {
+                        show: false,
+                        textStyle: {
+                            fontSize: 10
+                        },
+                        // formatter: "{c}"
+                    }
+                },
+                "useWorker": false,
+                "gravity": 1.1,
+                "scaling": 2.1,
+                "roam": "move",
+                data: [{
+                    name: '转发媒体',
+                    draggable: true,
+                    symbolSize: 100,
+                    category: 0
+                }, {
+                    name: '新华网：100',
+                    category: 1,
+                    draggable: true,
+                    symbolSize: 30,
+                    // value: 100,
+
+                }, {
+                    name: '搜狐：150',
+                    category: 2,
+                    draggable: true,
+                    symbolSize: 50,
+                    // value: 150
+                }, {
+                    name: '网易：194',
+                    category: 3,
+                    draggable: true,
+                    symbolSize: 55,
+                    // value: 194
+                }, {
+                    name: '腾讯网：201',
+                    category: 4,
+                    draggable: true,
+                    symbolSize: 60,
+                    // value: 201
+                }, {
+                    name: '人民网：120',
+                    category: 5,
+                    draggable: true,
+                    symbolSize: 45,
+                    // value: 120
+                }, {
+                    name: '今日头条：259',
+                    category: 6,
+                    draggable: true,
+                    symbolSize: 70,
+                    // value: 259
+                }, {
+                    name: '一点资讯：270',
+                    category: 7,
+                    draggable: true,
+                    symbolSize: 70,
+                    // value: 270
+                },
+                ],
+                links: [{
+                    source: "转发媒体",
+                    target: '新华网：100',
+                    // category: 0,
+                    // value: '新华网：100',
+
+
+                }, {
+                    source: "转发媒体",
+                    target: '搜狐：150',
+                    //  value: '搜狐'
+                }, {
+                    source: "转发媒体",
+                    target: '网易：194',
+                    // value: '网易'
+                }, {
+                    source: "转发媒体",
+                    target: '腾讯网：201',
+                    // value: '腾讯'
+                }, {
+                    source: "转发媒体",
+                    target: '人民网：120',
+                    //   value: '人民网'
+                }, {
+                    source: "转发媒体",
+                    target: '今日头条：259',
+                    //   value: '今日头条'
+                }, {
+                    source: "转发媒体",
+                    target: '一点资讯：270',
+                    // value: '一点资讯'
+                }],
+                // lineStyle: {
+                //     normal: {
+                //         opacity: 0.9,
+                //         width: 1,
+                //         curveness: 0
+                //     }
+                // }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pbox_1'));
+    option = {
+
+        // backgroundColor: new echarts.graphic.LinearGradient(
+        //   0, 0, 0, 1,
+        //   [
+        //     { offset: 0, color: '#fc00ff' },
+
+        //     { offset: 1, color: '#00dbde' }
+        //   ]
+        // ),
+        grid: {
+            top: '10',
+            bottom: "20",
+            left: "55",
+            right: '0'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+
+            axisLabel: {
+                color: "white"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'white'
+                }
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                color: "white"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'white'
+                }
+            },
+            splitLine: {show: false}
+        },
+        series: [{
+            data: [23, 60, 84, 102, 185, 162, 140],
+            type: 'line',
+            itemStyle: {
+                normal: {
+                    lineStyle: {
+                        width: 3
+                    }
+
+                }
+            }
+        }]
+    };
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pbox_3'));
+    option = {
+
+        // backgroundColor: new echarts.graphic.LinearGradient(
+        //   0, 0, 0, 1,
+        //   [
+        //     { offset: 0, color: '#fc00ff' },
+
+        //     { offset: 1, color: '#00dbde' }
+        //   ]
+        // ),
+        grid: {
+            top: '10',
+            bottom: "20",
+            left: "55",
+            right: '0'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+
+            axisLabel: {
+                color: "white"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'white'
+                }
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                color: "white"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'white'
+                }
+            },
+            splitLine: {show: false}
+        },
+        series: [{
+            data: [103, 350, 761, 761, 940, 1300, 1241],
+            type: 'line',
+            itemStyle: {
+                normal: {
+                    lineStyle: {
+                        width: 3
+                    }
+
+                }
+            }
+        }]
+    };
+
+    myChart.setOption(option);
+</script>
+</body>
+
+</html>

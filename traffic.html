@@ -1,0 +1,2175 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>交通分析</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/edit.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/config.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6F4DmNRG6M64UC3nqsO762hrRNh1wniV"></script>
+<script src="js/echarts.min.js" charset="utf-8"></script>
+<script src="js/jquery-3.2.0.min.js" charset="utf-8"></script>
+<script src="beijing.js"></script>
+<script src="js/traffic.js"></script>
+<style>
+    .mrbox {
+        float: left;
+        width: 70%;
+        height: 100%;
+    }
+
+    .tlbox li {
+        padding-top: 4.6%;
+    }
+
+    .tlbox {
+        height: 81%;
+    }
+
+    .amiddboxttop .tith2 {
+        padding-top: 1%;
+    }
+
+    .amiddboxtbott1 {
+        height: 92.6%;
+    }
+
+    .amiddboxtbott2 {
+        height: 92.6%;
+    }
+
+    .amiddboxtbott1content2 {
+
+        height: 88% !important;
+    }
+
+    .arightboxbott {
+        height: 35.3%;
+    }
+
+    .amiddboxtbott2content {
+        height: 87% !important;
+    }
+
+</style>
+<body>
+<div class="wpbox">
+    <div class="bnt">
+        <div class="topbnt_left fl">
+            <ul>
+                <li><a href="home.html">综合分析</a></li>
+                <li><a href="public.html">舆情分析</a></li>
+                <li><a href="statistics.html">游客统计</a></li>
+            </ul>
+        </div>
+        <h1 class="tith1 fl">交通监管</h1>
+        <div class=" topbnt_right">
+            <ul>
+                <li><a href="scenic.html">景区管理</a></li>
+
+                <li class="active"><a href="traffic.html">交通分析</a></li>
+
+                <span class="newDate"></span>
+
+            </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- bnt end -->
+    <div class="left1">
+        <div class="aleftboxttop ">
+            <h2 class="tith2">景区车辆进入情况</h2>
+
+            <div class="tlbox updateDataMain">
+                <ul>
+                    <li>
+                        <p class="text"><span class="w12">本地车辆:</span><span><i class="ricon1"></i>昨日: <span
+                                class="twData">2312</span> </span><span><i class="tricon1"></i>今日:<span
+                                class="updateData">500</span> </span><span class="tr"><img src="img/icondown.png"
+                                                                                           height="16"/>
+                  1</span>
+                        </p>
+                        <p class="rwith"><span class="rwith_img" style="width:80%"></span></p>
+                    </li>
+                    <li>
+                        <p class="text"><span class="w12">外地车辆:</span><span><i class="ricon2"></i>昨日: <span
+                                class="twData">1295</span> </span><span><i class="tricon2"></i>今日:<span
+                                class="updateData">390</span> </span><span class="tr"><img src="img/iconup.png"
+                                                                                           height="16"/>
+                  1</span>
+                        </p>
+                        <p class="rwith bgc2"><span class="rwith_img qgc2" style="width:76%"></span></p>
+                    </li>
+                    <li>
+                        <p class="text"><span class="w12">乘客人员数量:</span><span><i class="ricon3"></i>昨日: <span
+                                class="twData">6410</span> </span><span><i class="tricon3"></i>今日:<span
+                                class="updateData">850</span></span><span class="tr"><img src="img/iconup.png"
+                                                                                          height="16"/>
+                  1</span>
+                        </p>
+                        <p class="rwith bgc3"><span class="rwith_img qgc3" style="width:88%"></span></p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- lefttoday_number end -->
+        </div>
+        <div class="aleftboxtmidd">
+            <h2 class="tith2 pt2">道路车流状况</h2>
+            <!-- <div class="lefttoday_tit" style=" height:8%">
+              <p class="fl">地区：甘孜</p>
+              <p class="fm">周期：每日</p>
+              <p class="fr">2018-06-14</p>
+            </div> -->
+            <!-- <div class="tlbox">
+              <ul>
+                <li>
+                  <p class="text"><span class="w12">本地车辆:</span><span><i class="ricon1"></i>昨日:6</span><span><i
+                        class="tricon1"></i>今日: 5</span><span class="tr"><img src="img/icondown.png" height="16" /> 1</span>
+                  </p>
+                  <p class="rwith"><span class="rwith_img" style="width:60%"></span></p>
+                </li>
+                <li>
+                  <p class="text"><span class="w12">外地车辆:</span><span><i class="ricon2"></i>昨日:1200</span><span><i
+                        class="tricon2"></i>今日:<span class="updateData">105</span></span><span class="tr"><img src="img/iconup.png" height="16" /> 1</span>
+                  </p>
+                  <p class="rwith bgc2"><span class="rwith_img qgc2" style="width:40%"></span></p>
+                </li>
+                <li>
+                  <p class="text"><span class="w12">乘客人员数量:</span><span><i class="ricon3"></i>昨日:4620</span><span><i
+                        class="tricon3"></i>今日:<span class="updateData">350</span></span><span class="tr"><img src="img/iconup.png" height="16" /> 1</span>
+                  </p>
+                  <p class="rwith bgc3"><span class="rwith_img qgc3" style="width:50%"></span></p>
+                </li>
+              </ul>
+            </div> -->
+            <div class="tlbox tlboxEdit">
+                <div>
+
+                    <ul>
+                        <li><span>风动石-团结路</span><span class="tlboxRoad" style="color:#c23531;">1049</span><a href="#">查看监控></a>
+                        </li>
+                        <li><span>东门屿</span><span class="tlboxRoad" style="color:#c23531;">1015</span><a
+                                href="#">查看监控></a></li>
+                        <li><span>尖峰山-疏港路</span><span class="tlboxRoad">470</span><a href="#">查看监控></a></li>
+                        <li><span>苏峰寺-苏峰山路</span><span class="tlboxRoad">302</span><a href="#">查看监控></a></li>
+                        <li><span>马銮湾-城垵路</span><span class="tlboxRoad">406</span><a href="#">查看监控></a></li>
+                        <li><span>四面佛-环岛路</span><span class="tlboxRoad">102</span><a href="#">查看监控></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="aleftboxtbott">
+            <h2 class="tith2 pt2">车辆来源地统计</h2>
+            <!-- <div class="lefttoday_tit height"><p class="fl">状态：已调节.æl,kmo</p><p class="fr">时间段：2018-06-10 至 2018-06-14</p></div> -->
+            <div id="aleftboxtmidd" class="aleftboxtbott_cont2"></div>
+        </div>
+    </div>
+    <!--  left1 end -->
+    <div class="mrbox">
+        <div class="mrbox_topmidd" style="width: 69%;">
+            <div class="amiddboxttop">
+                <h2 class="tith2 ">交通监控</h2>
+                <div class="amiddboxttopMain">
+                    <div>
+                        <section>
+                            <!-- muted静音   autoplay自动播放  loop循环 -->
+                            <video src="video/2.mp4" loop="loop" muted autoplay></video>
+                        </section>
+                    </div>
+                    <div>
+                        <section>
+                            <video src="video/1.mp4" loop="loop" muted autoplay></video>
+
+                        </section>
+
+                    </div>
+                    <div>
+                        <section>
+                            <video src="video/3.mp4" loop="loop" muted autoplay></video>
+
+                        </section>
+
+                    </div>
+                    <div>
+                        <section>
+                            <video src="video/4.mp4" loop="loop" muted autoplay></video>
+
+                        </section>
+
+                    </div>
+                    <div>
+                        <section>
+                            <video src="video/5.mp4" loop="loop" muted autoplay></video>
+
+                        </section>
+
+                    </div>
+                    <div>
+                        <section>
+                            <video src="video/6.mp4" loop="loop" muted autoplay></video>
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+            <!--  amiddboxttop end-->
+            <div class="amidd_bott">
+                <div class="amiddboxtbott1 fl">
+                    <h2 class="tith2 pt1">实时统计</h2>
+                    <div id="arightboxbott" class="amiddboxtbott2content">
+                        <ul>
+                            <li>
+                                <img src="img/info-img-1.png" alt="">
+                                <p>今日车辆总数(辆)</p>
+                                <b>12457</b>
+                            </li>
+                            <li>
+                                <img src="img/info-img-2.png" alt="">
+                                <p>景区内车辆数(辆)</p>
+                                <b>4234</b>
+                            </li>
+                            <li>
+                                <img src="img/info-img-3.png" alt="">
+                                <p>停车场车辆数(辆)</p>
+                                <b>7834</b>
+                            </li>
+                            <li>
+                                <img src="img/info-img-4.png" alt="">
+                                <p>外来车辆比例(%)</p>
+                                <b>74%</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="amiddboxtbott2 fl">
+
+                    <h2 class="tith2 pt1">交通压力表</h2>
+                    <!-- <div class="lefttoday_tit">
+                      <p class="fr">2018-06-14</p>
+                    </div> -->
+                    <div id="amiddboxtbott1" class="amiddboxtbott1content2"></div>
+                </div>
+            </div>
+            <!-- amidd_bott end -->
+        </div>
+        <!-- mrbox_top end -->
+        <div class="mrbox_top_right">
+            <div class="arightboxtop">
+                <h2 class="tith2">交通地图</h2>
+                <div id="allmap" class="aleftboxtbott_contr">
+
+                </div>
+            </div>
+            <div class="arightboxbott">
+                <h2 class="tith2 ">交通预警</h2>
+
+                <!-- <div id="aleftboxtmiddr" class="arightboxbottcont2"> -->
+                <div id="aleftboxtmiddr" class="amiddboxtbott2content">
+
+                    <ul>
+                        <li class="hotRed">
+                            <p>城市热力情况</p>
+                            <b><span>3/</span>
+                                <small>1m²</small>
+                            </b>
+                            <p>人群密集度: <span>高</span></p>
+                        </li>
+                        <li class="hotRed">
+                            <p>车流量分析</p>
+                            <b><span>217/</span>
+                                <small>分</small>
+                            </b>
+                            <p>车辆密集度: <span>高</span></p>
+                        </li>
+                        <li>
+                            <p>道路分析</p>
+                            <b> <span>75/</span>
+                                <small>分</small>
+                            </b>
+                            <p>道路标准承载量<span></span></p>
+                        </li>
+                        <li>
+                            <p>车辆情况</p>
+                            <b> <span>60/</span>
+                                <small>辆</small>
+                            </b>
+                            <p>每平方千米车辆数<span></span></p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- mrbox_top_right end -->
+    </div>
+
+</div>
+<div class="alertMask">
+    <div class="mask"></div>
+    <video class="maskVideo" src="" loop="loop" muted autoplay></video>
+</div>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtmidd'));
+    option = {
+        color: ['#4d72d9', '#76c4bf', '#e5ffc7'],
+        //backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 60,
+            right: 60,
+            top: 20,
+            bottom: 0,
+            containLabel: true
+        },
+        legend: {
+            left: 10,
+            top: 5,
+            textStyle: {
+                fontSize: 10,
+                color: 'rgba(255,255,255,.6)'
+            },
+            data: ['本地车辆', '外省车辆', '本省车辆']
+        },
+        calculable: true,
+        series: [
+
+            {
+                color: ['#ff4343', '#45dbf7', '#f6d54a'],
+                name: '面积模式',
+                type: 'pie',
+                radius: "70%",
+                center: ['50%', '55%'],
+                roseType: 'area',
+                data: [
+                    {value: 187650, name: '本地车辆'},
+                    {value: 145896, name: '外省车辆'},
+                    {value: 148920, name: '本省车辆'},
+
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<!-- <script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('aleftboxtmiddr'));
+  option = {
+    color: ['#f1b1ff', '#aae3fb', '#e5ffc7'],
+    //backgroundColor: 'rgba(1,202,217,.2)',
+    grid: {
+      left: 60,
+      right: 60,
+      top: 20,
+      bottom: 0,
+      containLabel: true
+    },
+    legend: {
+      left: 10,
+      top: 5,
+      textStyle: {
+        fontSize: 10,
+        color: 'rgba(255,255,255,.6)'
+      },
+      data: ['A照', 'B照', 'C照']
+    },
+    calculable: true,
+    series: [
+
+      {
+        name: '面积模式',
+        type: 'pie',
+        radius: [20, 70],
+        center: ['50%', '55%'],
+        roseType: 'area',
+        data: [
+          { value: 187650, name: 'A照' },
+          { value: 145896, name: 'B照' },
+          { value: 148920, name: 'C照' },
+
+        ]
+      }
+    ]
+  };
+  myChart.setOption(option);
+</script> -->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtbott'));
+    option = {
+        color: ['#7ecef4'],
+        //backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 20,
+            right: 50,
+            top: 23,
+            bottom: 30,
+            containLabel: true
+        },
+
+        xAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,0)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,1)"
+            },
+            data: ['1000', '5000', '10000', '15000', '20000', '25000'],
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.5)"
+            },
+            data: ['C2', 'C1', 'B2', 'B1', 'A3', 'A2', 'A1']
+        },
+        series: [
+            {
+                name: '2011年',
+                type: 'bar',
+                barWidth: 30,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                            ]
+                        )
+                    }
+                },
+                data: [18203, 23489, 29034, 18203, 23489, 29034, 29034]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('amiddboxtbott2'));
+    option = {
+        //backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 60,
+            right: 60,
+            top: 50,
+            bottom: 40
+        },
+
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            top: 10,
+            textStyle: {
+                fontSize: 10,
+                color: 'rgba(255,255,255,.7)'
+            },
+            data: ['2017年', '2018年', '同比增速']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    color: "rgba(255,255,255,.7)"
+                },
+
+                data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 250,
+                interval: 50,
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} ml'
+                }
+            },
+            {
+                type: 'value',
+                name: '',
+                max: 25,
+                interval: 5,
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            }
+        ],
+        series: [
+
+            {
+                name: '2017年',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#b266ff'},
+                                {offset: 1, color: '#121b87'}
+                            ]
+                        )
+                    }
+                },
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '2018年',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#00f0ff'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '同比增速',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#fffb34'},
+                                {offset: 1, color: '#fffb34'}
+                            ]
+                        )
+                    }
+                },
+                yAxisIndex: 1,
+                data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<!-- <script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('arightboxbott'));
+  option = {
+    color: ['#00ffff', '#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'],
+    //backgroundColor: 'rgba(1,202,217,.2)',
+
+    grid: {
+      left: '5%',
+      right: '8%',
+      bottom: '7%',
+      top: '8%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.2)'
+        }
+      },
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.1)'
+        }
+      },
+      axisLabel: {
+        color: "rgba(255,255,255,.7)"
+      },
+      data: ['6-08', '6-09', '6-10', '6-11', '6-12', '6-13', '6-14']
+    },
+    yAxis: {
+      type: 'value',
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.2)'
+        }
+      },
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.1)'
+        }
+      },
+      axisLabel: {
+        color: "rgba(255,255,255,.7)"
+      },
+    },
+    series: [
+      {
+        name: '2014年',
+        type: 'line',
+        stack: '总量',
+        areaStyle: { normal: {} },
+        data: [120, 132, 101, 134, 90, 230, 210]
+      }
+
+    ]
+  };
+  myChart.setOption(option);
+</script> -->
+<!-- <script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('arightboxbott'));
+  option = {
+    color: ['#00ffff', '#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'],
+    //backgroundColor: 'rgba(1,202,217,.2)',
+
+    grid: {
+      left: '5%',
+      right: '8%',
+      bottom: '7%',
+      top: '8%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.2)'
+        }
+      },
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.1)'
+        }
+      },
+      axisLabel: {
+        color: "rgba(255,255,255,.7)"
+      },
+      data: ['6-08', '6-09', '6-10', '6-11', '6-12', '6-13', '6-14']
+    },
+    yAxis: {
+      type: 'value',
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.2)'
+        }
+      },
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.1)'
+        }
+      },
+      axisLabel: {
+        color: "rgba(255,255,255,.7)"
+      },
+    },
+    series: [
+      {
+        name: '2014年',
+        type: 'line',
+        stack: '总量',
+        areaStyle: { normal: {} },
+        data: [120, 132, 101, 134, 90, 230, 210]
+      }
+
+    ]
+  };
+  myChart.setOption(option);
+</script> -->
+<script type="text/javascript">
+    var myChart_1 = echarts.init(document.getElementById('amiddboxtbott1'));
+    // var data = [
+    //   [[28604, 77, 17099, 'Australia', 1990], [31163, 77.4, 2440, 'Canada', 1990], [1516, 68, 1605773, 'China', 1990], [13670, 74.7, 10082, 'Cuba', 1990], [28599, 75, 49805, 'Finland', 1990], [29476, 77.1, 569499, 'France', 1990], [31476, 75.4, 789237, 'Germany', 1990], [28666, 78.1, 254830, 'Iceland', 1990], [1777, 57.7, 870776, 'India', 1990], [29550, 79.1, 129285, 'Japan', 1990], [2076, 67.9, 201954, 'North Korea', 1990], [12087, 72, 42954, 'South Korea', 1990], [24021, 75.4, 33934, 'New Zealand', 1990], [43296, 76.8, 4240375, 'Norway', 1990], [10088, 70.8, 381958, 'Poland', 1990], [19349, 69.6, 1475652, 'Russia', 1990], [10670, 67.3, 53905, 'Turkey', 1990], [26424, 75.7, 57117, 'United Kingdom', 1990], [37062, 75.4, 252810, 'United States', 1990]],
+    //   [[44056, 81.8, 23973, 'Australia', 2015], [43294, 81.7, 35927, 'Canada', 2015], [13334, 76.9, 1376043, 'China', 2015], [21291, 78.5, 11562, 'Cuba', 2015], [38923, 80.8, 55057, 'Finland', 2015], [37599, 81.9, 64345, 'France', 2015], [44053, 81.1, 80545, 'Germany', 2015], [42182, 82.8, 329425, 'Iceland', 2015], [5903, 66.8, 1311027, 'India', 2015], [36162, 83.5, 126571, 'Japan', 2015], [1390, 71.4, 251317, 'North Korea', 2015], [34644, 80.7, 503439, 'South Korea', 2015], [34186, 80.6, 4528526, 'New Zealand', 2015], [64304, 81.6, 5210967, 'Norway', 2015], [24787, 77.3, 386194, 'Poland', 2015], [23038, 73.13, 143918, 'Russia', 2015], [19360, 76.5, 78630, 'Turkey', 2015], [38225, 81.4, 64715810, 'United Kingdom', 2015], [53354, 79.1, 321771, 'United States', 2015]]
+    // ];
+
+    // option = {
+    //   //backgroundColor: 'rgba(1,202,217,.2)',
+    //   grid: {
+    //     left: 40,
+    //     right: 40,
+    //     top: 50,
+    //     bottom: 40
+    //   },
+    //   title: {
+    //     top: 5,
+    //     left: 20,
+    //     textStyle: {
+    //       fontSize: 10,
+    //       color: 'rgba(255,255,255,.6)'
+    //     },
+    //     text: '环比类型：日环比'
+    //   },
+    //   // legend: {
+    //   //     right: 10,
+    //   //     top: 5,
+    //   //     textStyle:{
+    //   //       fontSize:10,
+    //   //       color:'rgba(255,255,255,.6)'
+    //   //     },
+    //   //     data: ['1990', '2015']
+    //   // },
+    //   xAxis: {
+    //     axisLine: {
+    //       lineStyle: {
+    //         color: 'rgba(255,255,255,.2)'
+    //       }
+    //     },
+    //     splitLine: {
+    //       lineStyle: {
+    //         color: 'rgba(255,255,255,.1)'
+    //       }
+    //     },
+    //     axisLabel: {
+    //       color: "rgba(255,255,255,.7)"
+    //     }
+    //   },
+    //   yAxis: {
+    //     axisLine: {
+    //       lineStyle: {
+    //         color: 'rgba(255,255,255,.2)'
+    //       }
+    //     },
+    //     splitLine: {
+    //       lineStyle: {
+    //         color: 'rgba(255,255,255,.1)'
+    //       }
+    //     },
+    //     axisLabel: {
+    //       color: "rgba(255,255,255,.7)"
+    //     },
+    //     scale: true
+    //   },
+    //   series: [{
+    //     name: '2015',
+    //     data: data[1],
+    //     type: 'scatter',
+    //     symbolSize: function (data) {
+    //       return Math.sqrt(data[2]) / 5e2;
+    //     },
+    //     label: {
+    //       emphasis: {
+    //         show: true,
+    //         formatter: function (param) {
+    //           return param.data[3];
+    //         },
+    //         position: 'top'
+    //       }
+    //     },
+    //     itemStyle: {
+    //       normal: {
+    //         shadowBlur: 10,
+    //         shadowColor: 'rgba(25, 100, 150, 0.5)',
+    //         shadowOffsetY: 5,
+    //         color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+    //           offset: 0,
+    //           color: 'rgb(129, 227, 238)'
+    //         }, {
+    //           offset: 1,
+    //           color: 'rgb(25, 183, 207)'
+    //         }])
+    //       }
+    //     }
+    //   }]
+    // };
+    option = {
+        //backgroundColor: 'rgba(1,202,217,.2)',
+        tooltip: {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        grid: {
+            //     left: 40,
+            //     right: 40,
+            // top: 50,
+            //     bottom: 40
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+
+            {
+                radius: "100%",
+                name: '业务指标',
+                type: 'gauge',
+                center: ["50%", "55%"],
+                axisLine: {            // 坐标轴线
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: [[0.2, 'lime'], [0.8, '#63869e'], [1, '#ff3333']]
+                    }
+                },
+                detail: {formatter: '{value}%'},
+                data: [{value: 50, name: '拥挤度'}],
+                title: {
+                    textStyle: {
+                        // fontWeight: 'bolder',
+                        // fontSize: 20,
+                        // fontStyle: 'italic',
+                        color: "white"
+                    }
+                },
+            }
+        ]
+    };
+
+
+    myChart_1.setOption(option);
+    // $(function(){
+    setInterval(function () {
+        option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+        myChart_1.setOption(option);
+    }, 2000);
+    // })
+</script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(117.427783, 23.671223), 12);
+    map.enableScrollWheelZoom();
+    var styleJson = [{
+        "featureType": "land",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#242f3eff"
+        }
+    }, {
+        "featureType": "manmade",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#242f3eff"
+        }
+    }, {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#17263cff"
+        }
+    }, {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#21c039ff"
+        }
+    }, {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#1ed446ff"
+        }
+    }, {
+        "featureType": "districtlabel",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d69563ff"
+        }
+    }, {
+        "featureType": "districtlabel",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#17263cff",
+            "weight": 3
+        }
+    }, {
+        "featureType": "poilabel",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d69563ff"
+        }
+    }, {
+        "featureType": "poilabel",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#17263cff",
+            "weight": 3
+        }
+    }, {
+        "featureType": "subway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "railway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "poilabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "subwaylabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "subwaylabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "tertiarywaysign",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "tertiarywaysign",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "provincialwaysign",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "provincialwaysign",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "nationalwaysign",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "nationalwaysign",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "highwaysign",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "highwaysign",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "green",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#263b3eff"
+        }
+    }, {
+        "featureType": "nationalwaysign",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d0021bff"
+        }
+    }, {
+        "featureType": "nationalwaysign",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#ffffffff"
+        }
+    }, {
+        "featureType": "city",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "on"
+        }
+    }, {
+        "featureType": "city",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "city",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d69563ff"
+        }
+    }, {
+        "featureType": "city",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#17263cff"
+        }
+    }, {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d69563ff"
+        }
+    }, {
+        "featureType": "water",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#242f3eff"
+        }
+    }, {
+        "featureType": "local",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#4a90e2ff"
+        }
+    }, {
+        "featureType": "local",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#ffffff0"
+        }
+    }, {
+        "featureType": "fourlevelway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#4a90e2ff"
+        }
+    }, {
+        "featureType": "fourlevelway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#ffffff00"
+        }
+    }, {
+        "featureType": "tertiaryway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#4a90e2ff"
+        }
+    }, {
+        "featureType": "tertiaryway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#ffffff0"
+        }
+    }, {
+        "featureType": "tertiaryway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "fourlevelway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#4a90e2ff"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#0cdd1200"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#4a90e2ff"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#554631ff"
+        }
+    }, {
+        "featureType": "tertiaryway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "fourlevelway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#7ed321ff"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#554631ff"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#4a90e2ff"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#554631ff"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#7ed321ff"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#554631fa"
+        }
+    }, {
+        "featureType": "medicallabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "medicallabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "entertainmentlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "entertainmentlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "estatelabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "estatelabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "businesstowerlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "businesstowerlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "companylabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "companylabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "governmentlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "governmentlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "restaurantlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "restaurantlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "hotellabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "hotellabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "shoppinglabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "shoppinglabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "lifeservicelabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "lifeservicelabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "carservicelabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "carservicelabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "financelabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "financelabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "otherlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "otherlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "airportlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "on"
+        }
+    }, {
+        "featureType": "airportlabel",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d69563ff"
+        }
+    }, {
+        "featureType": "airportlabel",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#17263cff"
+        }
+    }, {
+        "featureType": "airportlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "highway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "highway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "highway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "highway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "highway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "nationalway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "nationalway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "nationalway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "nationalway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "nationalway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "highway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "provincialway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "8,9",
+            "level": "8"
+        }
+    }, {
+        "featureType": "provincialway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "8,9",
+            "level": "9"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "8,9",
+            "level": "8"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "8,9",
+            "level": "9"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "8,9",
+            "level": "8"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "8,9",
+            "level": "9"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "6"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "7"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "8"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "6,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "arterial",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "9,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "arterial",
+        "stylers": {
+            "curZoomRegionId": "0",
+            "curZoomRegion": "9,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "9,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "9,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "9,10",
+            "level": "9"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off",
+            "curZoomRegionId": "0",
+            "curZoomRegion": "9,10",
+            "level": "10"
+        }
+    }, {
+        "featureType": "building",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#2a3341ff"
+        }
+    }, {
+        "featureType": "building",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#1a212eff"
+        }
+    }, {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#759879ff"
+        }
+    }, {
+        "featureType": "provincialway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "cityhighway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "arterial",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#1a2e1cff"
+        }
+    }, {
+        "featureType": "local",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "manmade",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#d69563ff"
+        }
+    }, {
+        "featureType": "manmade",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#17263cff"
+        }
+    }, {
+        "featureType": "subwaystation",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "transportationlabel",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "transportationlabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "estate",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#2a3341ff"
+        }
+    }, {
+        "featureType": "scenicspotslabel",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#fafafaff"
+        }
+    }, {
+        "featureType": "scenicspotslabel",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#ffffff00"
+        }
+    }, {
+        "featureType": "district",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "town",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "village",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "building",
+        "elementType": "geometry",
+        "stylers": {
+            "visibility": "on"
+        }
+    }, {
+        "featureType": "transportation",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#c72e2eff"
+        }
+    }];
+    map.setMapStyleV2({styleJson: styleJson});
+    var bounds = null;
+    var linesPoints = null;
+    var spoi1 = new BMap.Point(117.541093, 23.740071);    // 起点1
+    var spoi2 = new BMap.Point(117.407033, 23.61964);    // 起点2
+    var spoi3 = new BMap.Point(117.364644, 23.683594);
+    var spoi4 = new BMap.Point(117.493481, 23.717344);
+    var spoi5 = new BMap.Point(117.387107, 23.72086);
+    var epoi = new BMap.Point(117.444889, 23.717796);    // 终点
+    var epoi2 = new BMap.Point(117.43332, 23.668037);    // 终点2
+    var epoi3 = new BMap.Point(117.406397, 23.590103);
+    var epoi4 = new BMap.Point(117.474525, 23.673269);
+    var myIcon = new BMap.Icon("img/car.png", new BMap.Size(50, 50), {imageOffset: new BMap.Size(0, 0)});
+
+    function initLine() {
+        bounds = new Array();
+        linesPoints = new Array();
+        map.clearOverlays();                                                    // 清空覆盖物
+        // 清空覆盖物
+        var driving3 = new BMap.DrivingRoute(map, {onSearchComplete: drawLine});  // 驾车实例,并设置回调
+        driving3.search(spoi1, epoi3);                                       // 搜索一条线路
+        var driving4 = new BMap.DrivingRoute(map, {onSearchComplete: drawLine});  // 驾车实例,并设置回调
+        driving4.search(spoi2, epoi2);                                       // 搜索一条线路
+        var driving5 = new BMap.DrivingRoute(map, {onSearchComplete: drawLine});  // 驾车实例,并设置回调
+        driving5.search(spoi3, epoi4);
+        // 搜索一条线路
+        var driving6 = new BMap.DrivingRoute(map, {onSearchComplete: drawLine});  // 驾车实例,并设置回调
+        driving6.search(spoi4, epoi);
+        // 搜索一条线路
+        var driving7 = new BMap.DrivingRoute(map, {onSearchComplete: drawLine});  // 驾车实例,并设置回调
+        driving7.search(spoi5, epoi);
+    }
+
+
+    function run() {
+        for (var m = 0; m < linesPoints.length; m++) {
+            var pts = linesPoints[m];
+            var len = pts.length;
+            var carMk = new BMap.Marker(pts[0], {icon: myIcon});
+            map.addOverlay(carMk);
+            resetMkPoint(1, len, pts, carMk)
+        }
+
+        function resetMkPoint(i, len, pts, carMk) {
+            carMk.setPosition(pts[i]);
+            if (i < len) {
+                setTimeout(function () {
+                    i++;
+                    resetMkPoint(i, len, pts, carMk);
+                }, 600);
+            }
+        }
+
+    }
+
+    function drawLine(results) {
+        var opacity = 0.45;
+        var planObj = results.getPlan(0);
+        var b = new Array();
+        var addMarkerFun = function (point, imgType, index, title) {
+            var url;
+            var width;
+            var height
+            var myIcon;
+            // imgType:1的场合，为起点和终点的图；2的场合为车的图形
+            // if(imgType == 1){
+            // 	url = "http://lbsyun.baidu.com/jsdemo/img/dest_markers.png";
+            // 	width = 42;
+            // 	height = 34;
+            // 	myIcon = new BMap.Icon(url,new BMap.Size(width, height),{offset: new BMap.Size(14, 32),imageOffset: new BMap.Size(0, 0 - index * height)});
+            // }else{
+            // 	url = "http://lbsyun.baidu.com/jsdemo/img/trans_icons.png";
+            // 	width = 22;
+            // 	height = 25;
+            // 	var d = 25;
+            // 	var cha = 0;
+            // 	var jia = 0
+            // 	if(index == 2){
+            // 		d = 21;
+            // 		cha = 5;
+            // 		jia = 1;
+            // 	}
+            // 	myIcon = new BMap.Icon(url,new BMap.Size(width, d),{offset: new BMap.Size(10, (11 + jia)),imageOffset: new BMap.Size(0, 0 - index * height - cha)});
+            // }
+
+            // var marker = new BMap.Marker(point, {});
+            if (title != null && title != "") {
+                // marker.setTitle(title);
+            }
+            // 起点和终点放在最上面
+            if (imgType == 1) {
+                // marker.setTop(true);
+            }
+            // map.addOverlay(marker);
+        }
+        var addPoints = function (points) {
+            for (var i = 0; i < points.length; i++) {
+                bounds.push(points[i]);
+                b.push(points[i]);
+            }
+        }
+        // 绘制驾车步行线路
+        for (var i = 0; i < planObj.getNumRoutes(); i++) {
+            var route = planObj.getRoute(i);
+            if (route.getDistance(false) <= 0) {
+                continue;
+            }
+            addPoints(route.getPath());
+            // 驾车线路
+            if (route.getRouteType() == BMAP_ROUTE_TYPE_DRIVING) {
+                map.addOverlay(new BMap.Polyline(route.getPath(), {
+                    strokeColor: "#7ed321",
+                    strokeOpacity: opacity,
+                    strokeWeight: 2,
+                    enableMassClear: true
+                }));
+            } else {
+                // 步行线路有可能为0
+                map.addOverlay(new BMap.Polyline(route.getPath(), {
+                    strokeColor: "#4a90e2",
+                    strokeOpacity: 0.75,
+                    strokeWeight: 2,
+                    enableMassClear: true
+                }));
+            }
+        }
+        map.setViewport(bounds);
+        // 终点
+        addMarkerFun(results.getEnd().point, 1, 1);
+        // 开始点
+        addMarkerFun(results.getStart().point, 1, 0);
+        linesPoints[linesPoints.length] = b;
+    }
+
+    initLine();
+    setTimeout(function () {
+        run();
+    }, 3000);
+</script>
+
+</body>
+
+</html>

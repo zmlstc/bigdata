@@ -1,0 +1,222 @@
+.pvr ul {
+    top: 10%;
+    left: 5%;
+}
+
+.pvr ul li {
+    margin-top: 102%;
+}
+
+.puleftboxtbott1 {
+    width: 95%;
+}
+
+.pulefttop {
+    height: 58%;
+}
+
+.tith2Edit {
+    padding-top: 3.5%;
+    margin-bottom: 1.5%;
+
+}
+
+.pumiddboxttop2_cont {
+    height: 91.4%;
+    margin-top: 2%;
+
+}
+
+.purightboxtopcont {
+    width: 92.5%;
+    height: 83%;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.purightboxmiddcont {
+    width: 95%;
+    height: 83%;
+    margin-left: 2.5%;
+    margin-top: 1%;
+}
+
+.purightboxbottcont {
+    width: 90.5%;
+    height: 91%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.puleftboxtbott {
+    margin-top: 2%;
+}
+
+.puleftboxtbott .pbox {
+    width: 100%;
+    height: 85%;
+}
+
+.purightboxbott {
+    background-image: url(../img/pumiddtop1.png);
+    height: 50%;
+}
+
+.pulefttop .box {
+    height: 88%;
+    /* display: flex;
+  flex-wrap: wrap;
+  align-content: space-between; */
+}
+
+.pulefttop .box section {
+    /* flex-basis: 95%;
+    height: 48%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.5%;
+    margin-top: 1%; */
+    height: 46%;
+    /* border: 1px solid; */
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 1%;
+}
+
+.pulefttop .box section:nth-of-type(2) {
+    margin-top: 4%;
+
+}
+
+.pulefttop .box section > p {
+    height: 9%;
+    font-size: 18px;
+    text-align: left;
+    line-height: 26px;
+    width: 200px;
+    text-align: center;
+    border-bottom: 2px solid #25bfa0;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    margin-left: 15px;
+
+}
+
+.pulefttop .box section > div:nth-of-type(1) {
+    width: 70%;
+}
+
+.pulefttop .box section > div:nth-of-type(2) {
+    width: 30%;
+}
+
+.pulefttop .box section > div {
+    height: 85%;
+    /* width: 50%; */
+    float: left;
+}
+
+.pulefttop .box section > div div {
+    /* padding: 0 30px; */
+    text-align: left;
+    font-size: 15px;
+    padding-left: 22%;
+}
+
+.pulefttop .pboxContentTitle {
+    color: #25bfa0;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 2px solid #25bfa0;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.pulefttop .pboxContentText {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.pulefttop .pboxContentGn {
+    color: #89e176;
+}
+
+.pulefttop .pboxContentBe {
+    color: #44bcff;
+}
+
+.pulefttop .pboxContentRd {
+    color: #fe211a;
+}
+
+.purightboxtop {
+    height: 36%;
+}
+
+.puleft2height {
+    width: 96%;
+    height: 93%;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.puleft2height .widget-inline-box:nth-of-type(odd) h3 {
+    color: #5caff1;
+}
+
+.puleft2height .widget-inline-box:nth-of-type(even) h3 {
+    color: #7de494;
+}
+
+.puleft2height .widget-inline-box {
+    padding: 0 !important;
+    height: 32.5%;
+}
+
+.pumiddboxttop1 .widget-inline-box p {
+    padding-top: 20%;
+}
+
+.left2_table {
+    height: 91.6%;
+    margin-top: 2%;
+    width: 90%;
+}
+
+.puleft {
+    padding-left: 2.2%;
+    width: 32.2%;
+    text-align: center;
+    height: 100%;
+}
+
+.puleft2 {
+    width: 38%;
+    height: 100%;
+    padding-left: .4%;
+}
+
+.pumiddboxttop1 {
+    width: 41.7%;
+}
+
+.pumiddboxttop2 {
+    width: 53.7%;
+}
+
+.f30 {
+    font-size: 38px !important;
+    margin: 10% 0;
+}
+
+.purightboxtop .tith2 {
+    padding-top: 1%;
+}
+
+.left2_table li h3 {
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+}
